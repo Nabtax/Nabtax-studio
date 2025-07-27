@@ -355,68 +355,6 @@
             font-size: 1rem;
         }
         
-        /* Contact Section */
-        .contact-form {
-            background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%);
-            padding: 1.5rem;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(0, 200, 83, 0.2);
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.6rem;
-            color: #00c853;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            background: linear-gradient(145deg, #2a2a2a 0%, #1e1e1e 100%);
-            border: 2px solid #333;
-            border-radius: 10px;
-            color: #e0e0e0;
-            font-size: 0.95rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-family: 'Cairo', sans-serif;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            border-color: #00c853 !important;
-            box-shadow: 0 0 10px rgba(0, 200, 83, 0.3);
-            outline: none;
-        }
-        
-        .submit-btn {
-            background: linear-gradient(135deg, #00c853 0%, #00ff5f 100%);
-            color: #000;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 900;
-            font-size: 1rem;
-            transition: all 0.4s ease;
-            display: block;
-            width: 100%;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 10px 30px rgba(0, 200, 83, 0.3);
-        }
-        
         /* تأثيرات الظهور */
         .fade-in {
             opacity: 0;
@@ -483,74 +421,6 @@
             color: #b0b0b0;
             font-size: 1rem;
             font-weight: 600;
-        }
-        
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .modal.active {
-            display: flex;
-            animation: fadeIn 0.3s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .modal-content {
-            background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            max-width: 500px;
-            width: 90%;
-            text-align: center;
-            position: relative;
-            border: 2px solid #00c853;
-            box-shadow: 0 10px 30px rgba(0, 200, 83, 0.3);
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 1.5rem;
-            color: #e0e0e0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .close-modal:hover {
-            color: #00c853;
-            transform: rotate(90deg);
-        }
-        
-        .modal-content i {
-            font-size: 3rem;
-            color: #00c853;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        
-        .modal-content h3 {
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .modal-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
         }
         
         /* Desktop Styles */
@@ -654,12 +524,6 @@
                 height: 160px;
                 margin: 2rem auto;
             }
-            
-            .contact-form {
-                max-width: 700px;
-                padding: 3rem;
-                margin: 0 auto;
-            }
         }
         
         /* Tablet Styles */
@@ -722,6 +586,8 @@
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#about">عن الاستديو</a></li>
                 <li><a href="#team">الفريق</a></li>
+                <li><a href="#news">الأخبار</a></li>
+                <li><a href="#projects">الأعمال</a></li>
             </ul>
         </nav>
     </header>
@@ -801,6 +667,18 @@
                     </div>
                 </div>
             </div>
+        </section>
+        
+        <!-- قسم الأخبار -->
+        <section id="news">
+            <h2 class="slide-in-right">الأخبار</h2>
+            <!-- سيتم إضافة المحتوى لاحقًا -->
+        </section>
+        
+        <!-- قسم الأعمال -->
+        <section id="projects">
+            <h2 class="slide-in-left">الأعمال</h2>
+            <!-- سيتم إضافة المحتوى لاحقًا -->
         </section>
     </main>
     
