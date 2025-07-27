@@ -722,7 +722,6 @@
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#about">عن الاستديو</a></li>
                 <li><a href="#team">الفريق</a></li>
-                <li><a href="#contact">التوظيف</a></li>
             </ul>
         </nav>
     </header>
@@ -803,51 +802,6 @@
                 </div>
             </div>
         </section>
-        
-        <section id="contact">
-            <h2 class="slide-in-right">انضم إلى فريقنا</h2>
-            <div class="contact-form slide-in-left">
-                <form id="application-form">
-                    <div class="form-group">
-                        <label for="name">الاسم الكامل</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">البريد الإلكتروني</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">رقم الهاتف</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="position">الوظيفة المتقدم لها</label>
-                        <select id="position" name="position" required>
-                            <option value="">اختر الوظيفة...</option>
-                            <option value="developer">مطور ألعاب</option>
-                            <option value="designer">رسام</option>
-                            <option value="sound">مصمم صوتيات</option>
-                            <option value="other">آخر</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">رسالة التقديم</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="portfolio">رابط ملف الأعمال (اختياري)</label>
-                        <input type="url" id="portfolio" name="portfolio">
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">إرسال الطلب</button>
-                </form>
-            </div>
-        </section>
     </main>
     
     <footer class="fade-in">
@@ -868,16 +822,6 @@
             </div>
         </div>
     </footer>
-    
-    <!-- Modal -->
-    <div class="modal" id="successModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <i class="fas fa-check-circle"></i>
-            <h3>تم الإرسال بنجاح!</h3>
-            <p>شكراً لتواصلك معنا، سنقوم بمراجعة طلبك والرد عليك في أقرب وقت ممكن.</p>
-        </div>
-    </div>
     
     <script>
         // Loading screen
@@ -1038,51 +982,6 @@
                 }
             };
             
-            // Form submission
-            const form = document.getElementById('application-form');
-            const modal = document.getElementById('successModal');
-            const closeModal = document.querySelector('.close-modal');
-            
-            if (form) {
-                const submitBtn = form.querySelector('.submit-btn');
-                
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    if (submitBtn) {
-                        const originalText = submitBtn.textContent;
-                        submitBtn.textContent = 'جاري الإرسال...';
-                        submitBtn.disabled = true;
-                        
-                        // Simulate form submission
-                        setTimeout(() => {
-                            modal.classList.add('active');
-                            form.reset();
-                            submitBtn.textContent = originalText;
-                            submitBtn.disabled = false;
-                        }, 1500);
-                    }
-                });
-            }
-            
-            // Close modal
-            if (closeModal) {
-                closeModal.addEventListener('click', () => {
-                    modal.classList.remove('active');
-                });
-            }
-            
-            // Close modal when clicking outside
-            window.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.classList.remove('active');
-                }
-            });
-            
-            // Initialize effects
-            setTimeout(typeWriter, 1000);
-            createParticles();
-            
             // Add hover/touch effects to member cards
             const memberCards = document.querySelectorAll('.member-card');
             memberCards.forEach(card => {
@@ -1121,6 +1020,10 @@
                     this.style.color = '#e0e0e0';
                 });
             });
+            
+            // Initialize effects
+            setTimeout(typeWriter, 1000);
+            createParticles();
         });
     </script>
 </body>
