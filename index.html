@@ -404,6 +404,121 @@
             transform: translateX(0);
         }
         
+        /* Discord Button Styles */
+        .discord-button-container {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .discord-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: #5865F2;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+            box-shadow: 0 10px 30px rgba(88, 101, 242, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .discord-btn i {
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .discord-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(88, 101, 242, 0.6);
+            background: #4752C4;
+            border-color: #ffffff30;
+        }
+        
+        .discord-btn:hover i {
+            transform: rotate(10deg) scale(1.1);
+        }
+        
+        /* News Section Styles */
+        .news-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .news-card {
+            background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            transition: all 0.4s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 200, 83, 0.3);
+            border-color: #00c853;
+        }
+        
+        .news-video {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            background: #000;
+            overflow: hidden;
+        }
+        
+        .news-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .news-content {
+            padding: 2rem;
+        }
+        
+        .news-title {
+            font-size: 1.5rem;
+            color: #00c853;
+            margin-bottom: 1rem;
+            font-weight: 900;
+        }
+        
+        .news-description {
+            color: #e0e0e0;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-weight: 600;
+        }
+        
+        .news-meta {
+            display: flex;
+            gap: 1rem;
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .news-meta i {
+            color: #00c853;
+            margin-left: 0.3rem;
+        }
+        
         /* Footer */
         footer {
             background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
@@ -412,11 +527,22 @@
             border-top: 3px solid #00c853;
         }
         
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-content .logo-container {
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1rem;
             margin: 1.5rem 0;
+            flex-wrap: wrap;
         }
         
         .social-links a {
@@ -430,6 +556,7 @@
             justify-content: center;
             border-radius: 50%;
             background: rgba(0, 200, 83, 0.1);
+            text-decoration: none;
         }
         
         .social-links a:hover {
@@ -531,6 +658,11 @@
                 font-size: clamp(1.1rem, 2.5vw, 1.4rem);
             }
             
+            .discord-btn {
+                font-size: 1.3rem;
+                padding: 1.2rem 3rem;
+            }
+            
             .about-content {
                 flex-direction: row;
                 gap: 4rem;
@@ -546,11 +678,19 @@
                 height: 160px;
                 margin: 2rem auto;
             }
+            
+            .news-container {
+                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            }
         }
         
         /* Tablet Styles */
         @media (min-width: 481px) and (max-width: 768px) {
             .team-members {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .news-container {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -619,6 +759,15 @@
             <div class="particles" id="particles"></div>
             <h1 class="fade-in">مرحباً بكم في Nabtax Studio</h1>
             <p class="fade-in">استديو متخصص في تطوير الألعاب الإبداعية التي تقدم تجارب فريدة للاعبين حول العالم. نبتكر، نطور، ونلهم.</p>
+            
+            <!-- زر الديسكورد في بداية الموقع -->
+            <div class="discord-button-container fade-in">
+                <a href="https://discord.gg/ZfpJCPSvS5" target="_blank" rel="noopener noreferrer" class="discord-btn">
+                    <i class="fab fa-discord"></i>
+                    انضم إلى سيرفر الديسكورد
+                </a>
+            </div>
+            
             <a href="#team" class="cta-button fade-in">تعرف على فريقنا</a>
         </section>
         
@@ -654,7 +803,7 @@
                     </div>
                     <div class="member-info">
                         <h3>Mazen</h3>
-                        <p>Dev & 3D Designer </p>
+                        <p>Dev & 3D Designer</p>
                     </div>
                 </div>
                 <div class="member-card">
@@ -666,7 +815,6 @@
                         <p>Dev & writer</p>
                     </div>
                 </div>
-                
                 <div class="member-card">
                     <div class="member-image">
                         <img src="https://i.postimg.cc/5tStwp5N/Untitled12-20260227144237.png" alt="Hamed" loading="lazy">
@@ -676,15 +824,30 @@
                         <p>Dev</p>
                     </div>
                 </div>
-                
-
             </div>
         </section>
         
-        <!-- قسم الأخبار -->
+        <!-- قسم الأخبار مع الفيديو المطلوب -->
         <section id="news">
             <h2 class="slide-in-right">الأخبار</h2>
-            <!-- سيتم إضافة المحتوى لاحقًا -->
+            <div class="news-container">
+                <div class="news-card slide-in-left">
+                    <div class="news-video">
+                        <!-- فيديو اليوتيوب المطلوب -->
+                        <iframe src="https://www.youtube.com/embed/d1tk4FzSYm4?si=orA4vIkiGN1Qelgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">إعلان جديد من Nabtax Studio</h3>
+                        <p class="news-description">
+                            شاهد أحدث فيديو لنا على يوتيوب! نستعرض فيه آخر التطورات والأخبار الخاصة بالمشاريع القادمة. لا تنسى الاشتراك في القناة لتصلك كل التحديثات أول بأول.
+                        </p>
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar-alt"></i> 6 مارس 2026</span>
+                            <span><i class="far fa-eye"></i> يوتيوب</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         
         <!-- قسم الأعمال -->
@@ -701,14 +864,15 @@
                 <img src="https://i.postimg.cc/QNWbzj7x/New-Project-9-0ED3DB9.png" alt="Nabtax Studio Logo" class="logo-img" loading="lazy">
             </div>
             <div class="social-links">
-                <a href="https://x.com/NabtaxStudio?t=eeEf1wm9hJzNUaFgZC2T_w&s=09" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://paypal.me/NabtaxStudio" aria-label="PayPal"><i class="fab fa-paypal"></i></a>
-                <a href="https://youtube.com/@nabtaxstudio?si=HRHgCrlf_1gzgQAu" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://nabtax-studio.itch.io/" aria-label="itch.io"><i class="fab fa-itch-io"></i></a> 
-                
+                <a href="https://x.com/NabtaxStudio?t=eeEf1wm9hJzNUaFgZC2T_w&s=09" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://paypal.me/NabtaxStudio" target="_blank" rel="noopener noreferrer" aria-label="PayPal"><i class="fab fa-paypal"></i></a>
+                <a href="https://youtube.com/@nabtaxstudio?si=HRHgCrlf_1gzgQAu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://nabtax-studio.itch.io/" target="_blank" rel="noopener noreferrer" aria-label="itch.io"><i class="fab fa-itch-io"></i></a>
+                <!-- رابط الديسكورد في الفوتر أيضاً -->
+                <a href="https://discord.gg/ZfpJCPSvS5" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fab fa-discord"></i></a>
             </div>
             <div class="copyright">
-                &copy; 2025 Nabtax Studio. جميع الحقوق محفوظة.
+                &copy; 2026 Nabtax Studio. جميع الحقوق محفوظة.
             </div>
         </div>
     </footer>
@@ -895,20 +1059,6 @@
                     this.style.transform = 'translateY(0)';
                     this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
                 }, {passive: true});
-            });
-            
-            // Add hover effects to social links
-            const socialLinks = document.querySelectorAll('.social-links a');
-            socialLinks.forEach(link => {
-                link.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px) scale(1.2)';
-                    this.style.color = '#00c853';
-                });
-                
-                link.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                    this.style.color = '#e0e0e0';
-                });
             });
             
             // Initialize effects
