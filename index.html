@@ -4,14 +4,14 @@
     <meta name="google-site-verification" content="wutwO8mrwHs1pmW8_O6Xat-ss6-FaFQnry96QS6ASyc" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Nabtax Studio - التقديم</title>
+    <title>Nabtax Studio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <meta name="description" content="Nabtax Studio هو استوديو مستقل لتطوير ألعاب الفيديو يقدم أفكار مبتكرة وتجارب ترفيهية ممتعة للاعبين.">
     <meta name="keywords" content="Nabtax Studio, تطوير ألعاب, استوديو ألعاب, ألعاب فيديو, جيمز, Indie Games, Game Development, Nabtax, مطور ألعاب, صناعة الألعاب, استوديو تطوير الألعاب">
     <meta name="author" content="Nabtax Studio">
 
-    <!-- Open Graph (للسوشيال ميديا) -->
+<!-- Open Graph (للسوشيال ميديا) -->
     <meta property="og:title" content="Nabtax Studio">
     <meta property="og:description" content="Nabtax Studio هو استوديو مستقل لتطوير ألعاب الفيديو بأفكار مبتكرة وتجارب جديدة.">
     <meta property="og:type" content="website">
@@ -142,26 +142,10 @@
             padding: 0.5rem 0;
         }
         
-        nav ul li a.active {
-            color: #00c853;
-            position: relative;
-        }
-        
-        nav ul li a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 2px;
-            background: #00c853;
-        }
-        
         /* Main Content */
         main {
             margin-top: 70px;
             padding: 1rem;
-            min-height: calc(100vh - 70px - 200px);
         }
         
         section {
@@ -186,18 +170,6 @@
             border-right: 5px solid #00c853;
             padding-right: 1rem;
             margin-bottom: 1.8rem;
-        }
-        
-        /* Page Styles */
-        .page {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-        
-        .page.active {
-            display: block;
-            opacity: 1;
         }
         
         /* Hero Section */
@@ -547,192 +519,6 @@
             margin-left: 0.3rem;
         }
         
-        /* Form Section - للتقديم */
-        .form-section {
-            padding: 2rem 1.5rem;
-            background: #0f260f;
-            border-radius: 20px;
-            margin: 2rem 0;
-            border: 2px solid #00c853;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-        
-        .form-section h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #00c853;
-            margin-bottom: 30px;
-            position: relative;
-            text-align: center;
-            border-right: none;
-        }
-        
-        .form-section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: #00c853;
-            border-radius: 10px;
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #b9e6b9;
-            font-size: 1.1rem;
-        }
-        
-        label i {
-            margin-left: 8px;
-            color: #00c853;
-        }
-        
-        input, textarea, select {
-            width: 100%;
-            padding: 15px 20px;
-            background: #1f3a1f;
-            border: 2px solid #1e5f1e;
-            border-radius: 16px;
-            font-family: 'Cairo', sans-serif;
-            font-size: 1rem;
-            color: #f0fff0;
-            transition: 0.3s;
-            outline: none;
-        }
-        
-        input:focus, textarea:focus, select:focus {
-            border-color: #00c853;
-            box-shadow: 0 0 0 4px rgba(0, 200, 83, 0.3);
-            background: #173317;
-        }
-        
-        input::placeholder, textarea::placeholder {
-            color: #6a8e6a;
-            font-weight: 300;
-        }
-        
-        select {
-            appearance: none;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2300c853' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
-            background-repeat: no-repeat;
-            background-position: left 20px center;
-            background-size: 20px;
-        }
-        
-        select option {
-            background: #1f3a1f;
-            color: #e0ffe0;
-        }
-        
-        textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-        
-        .file-note {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: #1b4b1b;
-            padding: 12px 18px;
-            border-radius: 14px;
-            margin: 15px 0 25px;
-            font-size: 0.95rem;
-            color: #b9f6b9;
-            border: 1px solid #388e3c;
-        }
-        
-        .file-note i {
-            font-size: 1.5rem;
-            color: #00c853;
-        }
-        
-        .submit-btn {
-            background: #2e7d32;
-            background: linear-gradient(145deg, #00c853, #00a5e0);
-            color: white;
-            font-weight: 700;
-            font-size: 1.5rem;
-            padding: 18px 30px;
-            border: none;
-            border-radius: 60px;
-            width: 100%;
-            cursor: pointer;
-            transition: 0.3s;
-            border: 1px solid #66bb6a;
-            box-shadow: 0 10px 20px -5px #0f2f0f;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            letter-spacing: 1px;
-        }
-        
-        .submit-btn:hover {
-            background: #1b5e20;
-            background: linear-gradient(145deg, #00a5e0, #00c853);
-            transform: translateY(-3px);
-            box-shadow: 0 20px 30px -8px #1f4f1f;
-            border-color: #a5d6a7;
-        }
-        
-        .submit-btn i {
-            font-size: 1.6rem;
-        }
-        
-        .email-notice {
-            text-align: center;
-            margin-top: 25px;
-            font-size: 1.1rem;
-            background: #163016;
-            padding: 15px;
-            border-radius: 60px;
-            border: 1px solid #2e7d32;
-            color: #c8e6c9;
-        }
-        
-        .email-notice i {
-            color: #00c853;
-            margin-left: 8px;
-        }
-        
-        .email-notice strong {
-            color: #a5d6a7;
-            font-weight: 700;
-            direction: ltr;
-            display: inline-block;
-            background: #1f4a1f;
-            padding: 5px 15px;
-            border-radius: 30px;
-            margin-right: 8px;
-            border: 1px solid #00c853;
-        }
-        
-        .apply-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .apply-header h1 {
-            color: #00c853;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .apply-header p {
-            font-size: 1.2rem;
-            color: #e0e0e0;
-        }
-        
         /* Footer */
         footer {
             background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
@@ -841,11 +627,6 @@
                 transform: translateY(-3px);
             }
             
-            nav ul li a.active::after {
-                width: 80%;
-                right: 10%;
-            }
-            
             main {
                 margin-top: 80px;
                 padding: 2rem;
@@ -900,10 +681,6 @@
             
             .news-container {
                 grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            }
-            
-            .form-section {
-                padding: 3rem 4rem;
             }
         }
         
@@ -968,187 +745,116 @@
         </div>
         <nav id="mainNav">
             <ul>
-                <li><a href="#home" class="nav-link" data-page="home">الرئيسية</a></li>
-                <li><a href="#apply" class="nav-link" data-page="apply">التقديم</a></li>
-                <li><a href="#about" class="nav-link" data-page="home">عن الاستديو</a></li>
-                <li><a href="#team" class="nav-link" data-page="home">الفريق</a></li>
-                <li><a href="#news" class="nav-link" data-page="home">الأخبار</a></li>
-                <li><a href="#projects" class="nav-link" data-page="home">الأعمال</a></li>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">عن الاستديو</a></li>
+                <li><a href="#team">الفريق</a></li>
+                <li><a href="#news">الأخبار</a></li>
+                <li><a href="#projects">الأعمال</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <!-- الصفحة الرئيسية -->
-        <div id="home-page" class="page active">
-            <section id="home" class="hero">
-                <div class="particles" id="particles"></div>
-                <h1 class="fade-in">مرحباً بكم في Nabtax Studio</h1>
-                <p class="fade-in">استديو متخصص في تطوير الألعاب الإبداعية التي تقدم تجارب فريدة للاعبين حول العالم. نبتكر، نطور، ونلهم.</p>
-                
-                <!-- زر الديسكورد في بداية الموقع -->
-                <div class="discord-button-container fade-in">
-                    <a href="https://discord.gg/ZfpJCPSvS5" target="_blank" rel="noopener noreferrer" class="discord-btn">
-                        <i class="fab fa-discord"></i>
-                        انضم إلى سيرفر الديسكورد
-                    </a>
-                </div>
-                
-                <!-- زر التقديم في الصفحة الرئيسية -->
-                <div style="margin-top: 1rem;">
-                    <a href="#apply" class="cta-button fade-in apply-nav-btn">قدم الآن للانضمام للفريق</a>
-                </div>
-            </section>
+        <section id="home" class="hero">
+            <div class="particles" id="particles"></div>
+            <h1 class="fade-in">مرحباً بكم في Nabtax Studio</h1>
+            <p class="fade-in">استديو متخصص في تطوير الألعاب الإبداعية التي تقدم تجارب فريدة للاعبين حول العالم. نبتكر، نطور، ونلهم.</p>
             
-            <section id="about">
-                <h2 class="slide-in-right">عن الاستديو</h2>
-                <div class="about-content">
-                    <div class="about-text slide-in-left">
-                        <p>Nabtax Studio هو استديو مستقل لتطوير الألعاب، تأسس بهدف تقديم تجارب لعب مميزة ومبتكرة. نؤمن بأن الألعاب هي فن تفاعلي قادر على سرد القصص وإثارة المشاعر.</p>
-                        <p>نحن فريق من المطورين المتحمسين الذين يجمعون بين الخبرة التقنية والإبداع الفني لإنشاء ألعاب تترك أثراً لدى اللاعبين.</p>
-                        <p>نركز على الجودة في كل تفصيل، بدءاً من الميكانيكا الأساسية للعبة وصولاً إلى التصميم الفني والصوتي.</p>
-                    </div>
-                    <div class="about-image slide-in-right">
-                        <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Game Development" loading="lazy">
-                    </div>
-                </div>
-            </section>
+            <!-- زر الديسكورد في بداية الموقع -->
+            <div class="discord-button-container fade-in">
+                <a href="https://discord.gg/ZfpJCPSvS5" target="_blank" rel="noopener noreferrer" class="discord-btn">
+                    <i class="fab fa-discord"></i>
+                    انضم إلى سيرفر الديسكورد
+                </a>
+            </div>
             
-            <section id="team">
-                <h2 class="slide-in-left">فريق العمل</h2>
-                <div class="team-members">
-                    <div class="member-card">
-                        <div class="member-image">
-                            <img src="https://i.postimg.cc/GmykF0SY/New-Project-059188A.png" alt="Abdo Pakosh" loading="lazy">
-                        </div>
-                        <div class="member-info">
-                            <h3>Abdo pakosh</h3>
-                            <p>CEO & Dev</p>
-                        </div>
-                    </div>
-                    <div class="member-card">
-                        <div class="member-image">
-                            <img src="https://i.postimg.cc/1zBq9yjg/cb98496bcab361b8ce245f7cfa4fb926.png" alt="Mazen" loading="lazy">
-                        </div>
-                        <div class="member-info">
-                            <h3>Mazen</h3>
-                            <p>Dev & 3D Designer</p>
-                        </div>
-                    </div>
-                    <div class="member-card">
-                        <div class="member-image">
-                            <img src="https://i.postimg.cc/Qx9bcgnn/Untitled13-20250701050551.png" alt="Adel" loading="lazy">
-                        </div>
-                        <div class="member-info">
-                            <h3>Adel</h3>
-                            <p>Dev & writer</p>
-                        </div>
-                    </div>
-                    <div class="member-card">
-                        <div class="member-image">
-                            <img src="https://i.postimg.cc/5tStwp5N/Untitled12-20260227144237.png" alt="Hamed" loading="lazy">
-                        </div>
-                        <div class="member-info">
-                            <h3>Hamed</h3>
-                            <p>Dev</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- قسم الأخبار مع الفيديو المطلوب -->
-            <section id="news">
-                <h2 class="slide-in-right">الأخبار</h2>
-                <div class="news-container">
-                    <div class="news-card slide-in-left">
-                        <div class="news-video">
-                            <!-- فيديو اليوتيوب المطلوب -->
-                            <iframe src="https://www.youtube.com/embed/d1tk4FzSYm4?si=orA4vIkiGN1Qelgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                        <div class="news-content">
-                            <h3 class="news-title">إعلان جديد من Nabtax Studio</h3>
-                            <p class="news-description">
-                                شاهد أحدث فيديو لنا على يوتيوب! نستعرض فيه آخر التطورات والأخبار الخاصة بالمشاريع القادمة. لا تنسى الاشتراك في القناة لتصلك كل التحديثات أول بأول.
-                            </p>
-                            <div class="news-meta">
-                                <span><i class="far fa-calendar-alt"></i> 6 مارس 2026</span>
-                                <span><i class="far fa-eye"></i> يوتيوب</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- قسم الأعمال -->
-            <section id="projects">
-                <h2 class="slide-in-left">الأعمال</h2>
-                <!-- سيتم إضافة المحتوى لاحقًا -->
-                <div style="text-align: center; padding: 3rem; background: #1e1e1e; border-radius: 15px;">
-                    <p style="font-size: 1.2rem;">قريباً... مشاريع جديدة قيد التطوير</p>
-                </div>
-            </section>
-        </div>
+            <a href="#team" class="cta-button fade-in">تعرف على فريقنا</a>
+        </section>
         
-        <!-- صفحة التقديم -->
-        <div id="apply-page" class="page">
-            <div class="apply-header">
-                <h1 class="fade-in">انضم إلى فريق Nabtax Studio</h1>
-                <p class="fade-in">نحن نبحث عن مواهب جديدة للانضمام إلينا في رحلة تطوير الألعاب</p>
+        <section id="about">
+            <h2 class="slide-in-right">عن الاستديو</h2>
+            <div class="about-content">
+                <div class="about-text slide-in-left">
+                    <p>Nabtax Studio هو استديو مستقل لتطوير الألعاب، تأسس بهدف تقديم تجارب لعب مميزة ومبتكرة. نؤمن بأن الألعاب هي فن تفاعلي قادر على سرد القصص وإثارة المشاعر.</p>
+                    <p>نحن فريق من المطورين المتحمسين الذين يجمعون بين الخبرة التقنية والإبداع الفني لإنشاء ألعاب تترك أثراً لدى اللاعبين.</p>
+                    <p>نركز على الجودة في كل تفصيل، بدءاً من الميكانيكا الأساسية للعبة وصولاً إلى التصميم الفني والصوتي.</p>
+                </div>
+                <div class="about-image slide-in-right">
+                    <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Game Development" loading="lazy">
+                </div>
             </div>
-            
-            <div class="form-section">
-                <h2><i class="fas fa-feather-alt"></i> نموذج التقديم</h2>
-                <form action="mailto:Nabtaxstudio@gmail.com" method="post" enctype="text/plain">
-                    <div class="form-group">
-                        <label><i class="fas fa-user"></i> الاسم الكامل *</label>
-                        <input type="text" name="الاسم" placeholder="مثال: أحمد محمد" required>
+        </section>
+        
+        <section id="team">
+            <h2 class="slide-in-left">فريق العمل</h2>
+            <div class="team-members">
+                <div class="member-card">
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/GmykF0SY/New-Project-059188A.png" alt="Abdo Pakosh" loading="lazy">
                     </div>
-                    <div class="form-group">
-                        <label><i class="fas fa-envelope"></i> البريد الإلكتروني *</label>
-                        <input type="email" name="البريد" placeholder="ahmed@example.com" required>
+                    <div class="member-info">
+                        <h3>Abdo pakosh</h3>
+                        <p>CEO & Dev</p>
                     </div>
-                    <div class="form-group">
-                        <label><i class="fas fa-phone-alt"></i> رقم الهاتف (اختياري)</label>
-                        <input type="tel" name="الهاتف" placeholder="+20 10 1234 5678">
+                </div>
+                <div class="member-card">
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/1zBq9yjg/cb98496bcab361b8ce245f7cfa4fb926.png" alt="Mazen" loading="lazy">
                     </div>
-                    <div class="form-group">
-                        <label><i class="fas fa-bolt"></i> المجال الذي تتقدم له *</label>
-                        <select name="المجال" required>
-                            <option value="" disabled selected>-- اختر مجالك --</option>
-                            <option value="مبرمج ألعاب">مبرمج ألعاب (Game Developer)</option>
-                            <option value="مصمم جرافيك">مصمم جرافيك / ثنائي وثلاثي الأبعاد</option>
-                            <option value="مصمم سيناريو">مصمم سيناريو ولعبة (Game Designer)</option>
-                            <option value="مهندس صوت">مهندس صوت ومؤثرات</option>
-                            <option value="اختبار جودة">اختبار جودة (QA)</option>
-                            <option value="أخرى">أخرى (حدد في الرسالة)</option>
-                        </select>
+                    <div class="member-info">
+                        <h3>Mazen</h3>
+                        <p>Dev & 3D Designer</p>
                     </div>
-                    <div class="form-group">
-                        <label><i class="fas fa-pen"></i> رسالة التقديم *</label>
-                        <textarea name="الرسالة" placeholder="حدثنا عن نفسك، خبراتك، سبب رغبتك في الانضمام إلى Nabtax Studio، وأي شيء تود إخبارنا به..." required></textarea>
+                </div>
+                <div class="member-card">
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/Qx9bcgnn/Untitled13-20250701050551.png" alt="Adel" loading="lazy">
                     </div>
-                    
-                    <!-- ملاحظات حول الرفع -->
-                    <div class="file-note">
-                        <i class="fas fa-paperclip"></i>
-                        <span><strong>ملاحظة:</strong> نموذج البريد الإلكتروني لا يدعم إرفاق الملفات مباشرة. يرجاء إرسال سيرتك الذاتية وأعمالك عبر بريد منفصل أو ذكر رابط لها في الرسالة.</span>
+                    <div class="member-info">
+                        <h3>Adel</h3>
+                        <p>Dev & writer</p>
                     </div>
-
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i> إرسال الطلب
-                    </button>
-                    
-                    <div class="email-notice">
-                        <i class="fas fa-envelope"></i> سيتم إرسال طلبك إلى: 
-                        <strong>Nabtaxstudio@gmail.com</strong>
+                </div>
+                <div class="member-card">
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/5tStwp5N/Untitled12-20260227144237.png" alt="Hamed" loading="lazy">
                     </div>
-                </form>
+                    <div class="member-info">
+                        <h3>Hamed</h3>
+                        <p>Dev</p>
+                    </div>
+                </div>
             </div>
-            
-            <div style="text-align: center; margin: 3rem 0;">
-                <a href="#home" class="cta-button apply-nav-btn">العودة للصفحة الرئيسية</a>
+        </section>
+        
+        <!-- قسم الأخبار مع الفيديو المطلوب -->
+        <section id="news">
+            <h2 class="slide-in-right">الأخبار</h2>
+            <div class="news-container">
+                <div class="news-card slide-in-left">
+                    <div class="news-video">
+                        <!-- فيديو اليوتيوب المطلوب -->
+                        <iframe src="https://www.youtube.com/embed/d1tk4FzSYm4?si=orA4vIkiGN1Qelgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">إعلان جديد من Nabtax Studio</h3>
+                        <p class="news-description">
+                            شاهد أحدث فيديو لنا على يوتيوب! نستعرض فيه آخر التطورات والأخبار الخاصة بالمشاريع القادمة. لا تنسى الاشتراك في القناة لتصلك كل التحديثات أول بأول.
+                        </p>
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar-alt"></i> 6 مارس 2026</span>
+                            <span><i class="far fa-eye"></i> يوتيوب</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+        
+        <!-- قسم الأعمال -->
+        <section id="projects">
+            <h2 class="slide-in-left">الأعمال</h2>
+            <!-- سيتم إضافة المحتوى لاحقًا -->
+        </section>
     </main>
     
     <footer class="fade-in">
@@ -1214,87 +920,38 @@
                 });
             }
             
-            // Page navigation
-            const pages = {
-                'home': document.getElementById('home-page'),
-                'apply': document.getElementById('apply-page')
-            };
-            
-            const navLinks = document.querySelectorAll('.nav-link');
-            const applyNavBtns = document.querySelectorAll('.apply-nav-btn');
-            
-            function showPage(pageId) {
-                // Hide all pages
-                Object.values(pages).forEach(page => {
-                    page.classList.remove('active');
-                });
-                
-                // Show selected page
-                if (pages[pageId]) {
-                    pages[pageId].classList.add('active');
-                }
-                
-                // Update active class on nav links
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('data-page') === pageId) {
-                        link.classList.add('active');
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            document.getElementById('menuToggle').innerHTML = '<i class="fas fa-bars"></i>';
+                            document.body.style.overflow = '';
+                        }
                     }
                 });
-                
-                // Close mobile menu if open
-                if (mainNav && mainNav.classList.contains('active')) {
-                    mainNav.classList.remove('active');
-                    document.getElementById('menuToggle').innerHTML = '<i class="fas fa-bars"></i>';
-                    document.body.style.overflow = '';
-                }
-                
-                // Scroll to top
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
-            
-            // Handle navigation link clicks
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const pageId = this.getAttribute('data-page');
-                    showPage(pageId);
-                });
             });
-            
-            // Handle apply buttons
-            applyNavBtns.forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    showPage('apply');
-                });
-            });
-            
-            // Handle hash changes (for direct links)
-            function handleHashChange() {
-                const hash = window.location.hash.substring(1);
-                if (hash === 'apply') {
-                    showPage('apply');
-                } else {
-                    showPage('home');
-                }
-            }
-            
-            window.addEventListener('hashchange', handleHashChange);
-            
-            // Check initial hash
-            if (window.location.hash === '#apply') {
-                showPage('apply');
-            }
             
             // Intersection Observer for scroll animations
             const animateOnScroll = () => {
                 const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
                 
-                elements.forEach(element => {
+                elements.forEach(element => {٨
                     const elementPosition = element.getBoundingClientRect().top;
                     const screenPosition = window.innerHeight / 1.2;
                     
@@ -1328,6 +985,25 @@
                 observer.observe(teamSection);
             }
             
+            // Typewriter effect for hero title
+            const typeWriter = () => {
+                const heroTitle = document.querySelector('.hero h1');
+                if (heroTitle) {
+                    const text = heroTitle.textContent;
+                    heroTitle.textContent = '';
+                    
+                    let i = 0;
+                    const typing = setInterval(() => {
+                        if (i < text.length) {
+                            heroTitle.textContent += text.charAt(i);
+                            i++;
+                        } else {
+                            clearInterval(typing);
+                        }
+                    }, 100);
+                }
+            };
+            
             // Create particles effect
             const createParticles = () => {
                 const heroSection = document.querySelector('.hero');
@@ -1360,6 +1036,33 @@
                 }
             };
             
+            // Add hover/touch effects to member cards
+            const memberCards = document.querySelectorAll('.member-card');
+            memberCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 15px 30px rgba(0, 200, 83, 0.4)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
+                });
+                
+                // Touch devices
+                card.addEventListener('touchstart', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 15px 30px rgba(0, 200, 83, 0.4)';
+                }, {passive: true});
+                
+                card.addEventListener('touchend', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
+                }, {passive: true});
+            });
+            
+            // Initialize effects
+            setTimeout(typeWriter, 1000);
             createParticles();
         });
     </script>
