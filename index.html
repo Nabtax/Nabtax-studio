@@ -842,23 +842,6 @@
                         <p>Artist</p>
                     </div>
                 </div>
-                <div class="member-card">
-                    <div class="member-image">
-                        <img src="<div class="member-card">
-                    <div class="member-image">
-                        <img src="https://i.postimg.cc/BbGkJ36q/Untitled472-20260307130802.png" alt="Mehdi Meri" loading="lazy">
-                    </div>
-                    <div class="member-info">
-                        <h3>Mehdi Meri</h3>
-                        <p>Artist</p>
-                    </div>
-                </div>" alt="Mehdi Meri" loading="lazy">
-                    </div>
-                    <div class="member-info">
-                        <h3>Mehdi Meri</h3>
-                        <p>Artist</p>
-                    </div>
-                </div>
             </div>
         </section>
         
@@ -898,6 +881,211 @@
                 <div class="logo">Nabtax Studio</div>
                 <img src="https://i.postimg.cc/QNWbzj7x/New-Project-9-0ED3DB9.png" alt="Nabtax Studio Logo" class="logo-img" loading="lazy">
             </div>
+            <div class="social-links">
+                <a href="https://x.com/NabtaxStudio?t=eeEf1wm9hJzNUaFgZC2T_w&s=09" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://paypal.me/NabtaxStudio" target="_blank" rel="noopener noreferrer" aria-label="PayPal"><i class="fab fa-paypal"></i></a>
+                <a href="https://youtube.com/@nabtaxstudio?si=HRHgCrlf_1gzgQAu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://nabtax-studio.itch.io/" target="_blank" rel="noopener noreferrer" aria-label="itch.io"><i class="fab fa-itch-io"></i></a>
+                <!-- رابط الديسكورد في الفوتر أيضاً -->
+                <a href="https://discord.gg/ZfpJCPSvS5" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fab fa-discord"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Nabtax Studio. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Loading screen
+        document.addEventListener('DOMContentLoaded', function() {
+            const loading = document.getElementById('loading');
+            if (loading) {
+                setTimeout(() => {
+                    loading.classList.add('hidden');
+                }, 800);
+            }
+            
+            // Header scroll effect
+            const header = document.getElementById('header');
+            if (header) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 100) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            }
+            
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+            
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+                    this.innerHTML = mainNav.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!mainNav.contains(e.target) && !menuToggle.contains(e.target) && mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            document.getElementById('menuToggle').innerHTML = '<i class="fas fa-bars"></i>';
+                            document.body.style.overflow = '';
+                        }
+                    }
+                });
+            });
+            
+            // Intersection Observer for scroll animations
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('active');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            window.addEventListener('load', animateOnScroll);
+            
+            // Animate team members
+            const teamSection = document.querySelector('#team');
+            if (teamSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const members = entry.target.querySelectorAll('.member-card');
+                            members.forEach((member, index) => {
+                                setTimeout(() => {
+                                    member.classList.add('visible');
+                                }, index * 200);
+                            });
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                });
+                
+                observer.observe(teamSection);
+            }
+            
+            // Typewriter effect for hero title
+            const typeWriter = () => {
+                const heroTitle = document.querySelector('.hero h1');
+                if (heroTitle) {
+                    const text = heroTitle.textContent;
+                    heroTitle.textContent = '';
+                    
+                    let i = 0;
+                    const typing = setInterval(() => {
+                        if (i < text.length) {
+                            heroTitle.textContent += text.charAt(i);
+                            i++;
+                        } else {
+                            clearInterval(typing);
+                        }
+                    }, 100);
+                }
+            };
+            
+            // Create particles effect
+            const createParticles = () => {
+                const heroSection = document.querySelector('.hero');
+                if (!heroSection) return;
+                
+                const particlesContainer = document.createElement('div');
+                particlesContainer.className = 'particles';
+                particlesContainer.id = 'particles';
+                heroSection.appendChild(particlesContainer);
+                
+                const particleCount = 30;
+                
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    
+                    const size = Math.random() * 5 + 2;
+                    const posX = Math.random() * window.innerWidth;
+                    const duration = Math.random() * 15 + 10;
+                    const delay = Math.random() * 5;
+                    
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+                    particle.style.left = `${posX}px`;
+                    particle.style.bottom = `-10px`;
+                    particle.style.animationDuration = `${duration}s`;
+                    particle.style.animationDelay = `${delay}s`;
+                    
+                    particlesContainer.appendChild(particle);
+                }
+            };
+            
+            // Add hover/touch effects to member cards
+            const memberCards = document.querySelectorAll('.member-card');
+            memberCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 15px 30px rgba(0, 200, 83, 0.4)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
+                });
+                
+                // Touch devices
+                card.addEventListener('touchstart', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 15px 30px rgba(0, 200, 83, 0.4)';
+                }, {passive: true});
+                
+                card.addEventListener('touchend', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
+                }, {passive: true});
+            });
+            
+            // Initialize effects
+            setTimeout(typeWriter, 1000);
+            createParticles();
+        });
+    </script>
+</body>
+</html>            </div>
             <div class="social-links">
                 <a href="https://x.com/NabtaxStudio?t=eeEf1wm9hJzNUaFgZC2T_w&s=09" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 <a href="https://paypal.me/NabtaxStudio" target="_blank" rel="noopener noreferrer" aria-label="PayPal"><i class="fab fa-paypal"></i></a>
