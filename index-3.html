@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta name="google-site-verification" content="wutwO8mrwHs1pmW8_O6Xat-ss6-FaFQnry96QS6ASyc" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nabtax Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Nabtax Studio هو استوديو مستقل لتطوير ألعاب الفيديو يقدم أفكار مبتكرة وتجارب ترفيهية ممتعة للاعبين.">
+    <meta name="keywords" content="Nabtax Studio, تطوير ألعاب, استوديو ألعاب, ألعاب فيديو, جيمز, Indie Games, Game Development, Nabtax, مطور ألعاب, صناعة الألعاب, استوديو تطوير الألعاب">
+    <meta name="author" content="Nabtax Studio">
+    <meta property="og:title" content="Nabtax Studio">
+    <meta property="og:description" content="Nabtax Studio هو استوديو مستقل لتطوير ألعاب الفيديو بأفكار مبتكرة وتجارب جديدة.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nabtax.github.io/Nabtax-studio/">
+    <meta property="og:image" content="https://nabtax.github.io/Nabtax-studio/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nabtax Studio">
+    <meta name="twitter:description" content="Nabtax Studio هو استوديو مستقل لتطوير ألعاب الفيديو بأفكار مبتكرة وتجارب جديدة.">
+    <meta name="twitter:image" content="https://nabtax.github.io/Nabtax-studio/preview.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, rgba(26,26,26,0.95) 0%, rgba(0,0,0,0.9) 100%);
+            padding: 0.8rem 1rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #00c853;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 0.5rem 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            width: 100%;
+            justify-content: space-between;
+        }
+        
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 3px solid #00c853;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #00c853;
+            text-shadow: 0 0 10px rgba(0,200,83,0.5);
+            letter-spacing: 1px;
+        }
+        
+        .menu-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: #00c853;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+        }
+        
+        nav {
+            width: 100%;
+            display: none;
+            margin-top: 1rem;
+            background: rgba(10,10,10,0.95);
+            border-radius: 0 0 10px 10px;
+            padding: 0.5rem 0;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        
+        nav.active {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        nav ul {
+            flex-direction: column;
+            gap: 0;
+            list-style: none;
+        }
+        
+        nav ul li {
+            padding: 0.8rem 1.5rem;
+            border-bottom: 1px solid rgba(51,51,51,0.5);
+        }
+        
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+        
+        /* Main */
+        main {
+            margin-top: 70px;
+            padding: 1rem;
+        }
+        
+        section {
+            padding: 2.5rem 0;
+            border-bottom: 1px solid rgba(51,51,51,0.3);
+        }
+        
+        h1, h2, h3 {
+            color: #00c853;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(0,200,83,0.3);
+        }
+        
+        h2 {
+            font-size: 1.6rem;
+            border-right: 5px solid #00c853;
+            padding-right: 1rem;
+            margin-bottom: 1.8rem;
+        }
+        
+        /* Hero */
+        .hero {
+            height: auto;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            padding: 3rem 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero h1 {
+            font-size: 2rem;
+            line-height: 1.3;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 900px;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            line-height: 1.8;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00c853 0%, #00ff5f 100%);
+            color: #000;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1rem;
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+            box-shadow: 0 10px 30px rgba(0,200,83,0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,200,83,0.5);
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to top, #0a0a0a, transparent);
+            z-index: 1;
+        }
+        
+        .particles {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(0,200,83,0.5);
+            border-radius: 50%;
+            animation: float linear infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); opacity: 1; }
+            100% { transform: translateY(-1000px) translateX(200px); opacity: 0; }
+        }
+        
+        /* About */
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+        
+        .about-image {
+            margin-top: 1rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover { transform: scale(1.02); }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img { transform: scale(1.05); }
+        
+        /* ===== TEAM - Improved Cards ===== */
+        .team-members {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .member-card {
+            background: linear-gradient(145deg, #1a1a1a 0%, #222 100%);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            border: 1px solid #2a2a2a;
+            border-right: 4px solid #00c853;
+            transform: translateX(20px);
+            opacity: 0;
+            transition: all 0.5s ease;
+            display: flex;
+            align-items: center;
+            padding: 0.85rem 1.1rem;
+            gap: 1rem;
+            cursor: pointer;
+        }
+        
+        .member-card.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .member-card:hover {
+            transform: translateX(-4px) !important;
+            box-shadow: 0 8px 30px rgba(0,200,83,0.2) !important;
+            border-right-color: #00ff5f;
+            border-color: rgba(0,200,83,0.2);
+            background: linear-gradient(145deg, #1e1e1e 0%, #252525 100%);
+        }
+        
+        .member-image {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2.5px solid #00c853;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0,200,83,0.2);
+        }
+        
+        .member-card:hover .member-image {
+            box-shadow: 0 0 20px rgba(0,200,83,0.5);
+            transform: scale(1.06);
+            border-color: #00ff5f;
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-info {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+        
+        .member-info h3 {
+            margin-bottom: 0.15rem;
+            font-size: 1rem;
+            color: #e8e8e8;
+            font-weight: 700;
+        }
+
+        .member-info .member-name-wrap {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .member-info p {
+            color: #00c853;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.78rem;
+            background: rgba(0,200,83,0.08);
+            border: 1px solid rgba(0,200,83,0.15);
+            border-radius: 20px;
+            padding: 0.1rem 0.5rem;
+            display: inline-block;
+            width: fit-content;
+        }
+
+        .member-number {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(0,200,83,0.08);
+            border: 1px solid rgba(0,200,83,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #00c853;
+            flex-shrink: 0;
+        }
+
+        .member-arrow {
+            color: #333;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .member-card:hover .member-arrow { color: #00c853; transform: translateX(-3px); }
+        
+        /* Animations */
+        .fade-in { opacity: 0; transition: opacity 0.8s ease; }
+        .fade-in.active { opacity: 1; }
+        .slide-in-left { opacity: 0; transform: translateX(-50px); transition: all 0.8s ease; }
+        .slide-in-left.active { opacity: 1; transform: translateX(0); }
+        .slide-in-right { opacity: 0; transform: translateX(50px); transition: all 0.8s ease; }
+        .slide-in-right.active { opacity: 1; transform: translateX(0); }
+        
+        /* Discord */
+        .discord-button-container {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .discord-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: #5865F2;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+            box-shadow: 0 10px 30px rgba(88,101,242,0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .discord-btn i { font-size: 1.8rem; transition: transform 0.3s ease; }
+        .discord-btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 40px rgba(88,101,242,0.6); background: #4752C4; border-color: #ffffff30; }
+        .discord-btn:hover i { transform: rotate(10deg) scale(1.1); }
+        
+        /* News */
+        .news-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .news-card {
+            background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+            transition: all 0.4s ease;
+        }
+        
+        .news-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,200,83,0.3); border-color: #00c853; }
+        
+        .news-video {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            background: #000;
+            overflow: hidden;
+        }
+        
+        .news-video iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: none;
+        }
+        
+        .news-content { padding: 2rem; }
+        .news-title { font-size: 1.5rem; color: #00c853; margin-bottom: 1rem; font-weight: 900; }
+        .news-description { color: #e0e0e0; margin-bottom: 1.5rem; line-height: 1.8; font-weight: 600; }
+        .news-meta { display: flex; gap: 1rem; color: #b0b0b0; font-size: 0.9rem; font-weight: 600; }
+        .news-meta i { color: #00c853; margin-left: 0.3rem; }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-top: 3px solid #00c853;
+        }
+        
+        .footer-content { max-width: 1200px; margin: 0 auto; }
+        
+        .footer-content .logo-container {
+            justify-content: center;
+            width: auto;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap; }
+        
+        .social-links a {
+            color: #e0e0e0;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            width: 50px; height: 50px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            background: rgba(0,200,83,0.1);
+            text-decoration: none;
+        }
+        
+        .social-links a:hover { transform: translateY(-5px) scale(1.2); color: #00c853; background: rgba(0,200,83,0.2); box-shadow: 0 5px 15px rgba(0,200,83,0.3); }
+        .copyright { color: #b0b0b0; font-size: 1rem; font-weight: 600; }
+        
+        /* ===== STATS COUNTER ===== */
+        .stats-section {
+            background: linear-gradient(135deg, rgba(0,200,83,0.05) 0%, rgba(0,0,0,0) 100%);
+            border: 1px solid rgba(0,200,83,0.15);
+            border-radius: 20px;
+            padding: 2.5rem 1rem;
+            margin-bottom: 2rem;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+        }
+        .stat-item { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #00c853;
+            text-shadow: 0 0 20px rgba(0,200,83,0.4);
+            line-height: 1;
+        }
+        .stat-label { font-size: 0.85rem; color: #888; font-weight: 600; }
+        @media(min-width:769px){
+            .stats-grid { grid-template-columns: repeat(4,1fr); }
+            .stat-number { font-size: 3rem; }
+        }
+
+        /* ===== MEMBER MODAL ===== */
+        .member-card { cursor: pointer; }
+        .modal-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.88); backdrop-filter: blur(8px);
+            z-index: 2000; align-items: center; justify-content: center; padding: 1rem;
+        }
+        .modal-overlay.open { display: flex; animation: fadeInModal .25s ease; }
+        @keyframes fadeInModal { from{opacity:0} to{opacity:1} }
+        .modal-box {
+            background: linear-gradient(145deg, #1a1a1a, #242424);
+            border: 1px solid rgba(0,200,83,0.3);
+            border-radius: 24px;
+            padding: 2rem 1.5rem;
+            width: 100%; max-width: 400px;
+            position: relative;
+            animation: slideUpModal .3s ease;
+            text-align: center;
+        }
+        @keyframes slideUpModal { from{transform:translateY(40px);opacity:0} to{transform:translateY(0);opacity:1} }
+        .modal-close {
+            position: absolute; top: 1rem; left: 1rem;
+            background: rgba(255,255,255,0.07); border: none;
+            color: #aaa; font-size: 1.2rem; width: 34px; height: 34px;
+            border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;
+            transition: all .2s;
+        }
+        .modal-close:hover { background: rgba(255,59,92,.2); color: #fff; }
+        .modal-avatar {
+            width: 100px; height: 100px; border-radius: 50%;
+            border: 3px solid #00c853;
+            object-fit: cover; margin: 0 auto 1rem;
+            box-shadow: 0 0 25px rgba(0,200,83,0.3);
+            display: block;
+        }
+        .modal-name { font-size: 1.5rem; font-weight: 900; color: #00c853; margin-bottom: .3rem; }
+        .modal-role {
+            display: inline-block;
+            background: rgba(0,200,83,0.1); border: 1px solid rgba(0,200,83,0.25);
+            color: #00c853; border-radius: 50px; padding: .25rem .9rem;
+            font-size: .85rem; font-weight: 700; margin-bottom: 1.2rem;
+        }
+        .modal-bio { color: #bbb; font-size: .95rem; line-height: 1.7; margin-bottom: 1.2rem; }
+        .modal-socials { display: flex; justify-content: center; gap: .8rem; flex-wrap: wrap; }
+        .modal-socials a {
+            background: rgba(0,200,83,0.1); border: 1px solid rgba(0,200,83,0.2);
+            color: #00c853; border-radius: 50px; padding: .4rem 1rem;
+            font-size: .8rem; font-weight: 700; text-decoration: none;
+            transition: all .2s; display: flex; align-items: center; gap: .4rem;
+        }
+        .modal-socials a:hover { background: rgba(0,200,83,0.2); transform: translateY(-2px); }
+
+        /* ===== PROJECTS ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .project-card {
+            background: linear-gradient(145deg, #1e1e1e, #252525);
+            border: 1px solid #333;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: all .4s ease;
+            opacity: 0; transform: translateY(30px);
+        }
+        .project-card.visible { opacity: 1; transform: translateY(0); }
+        .project-card:hover { transform: translateY(-6px); border-color: #00c853; box-shadow: 0 20px 40px rgba(0,200,83,0.2); }
+        .project-thumb {
+            width: 100%; height: 180px; object-fit: cover;
+            background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 3rem;
+        }
+        .project-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .project-body { padding: 1.3rem; }
+        .project-status {
+            display: inline-block;
+            font-size: .72rem; font-weight: 700; letter-spacing: .5px;
+            padding: .2rem .7rem; border-radius: 50px; margin-bottom: .7rem;
+            text-transform: uppercase;
+        }
+        .status-wip { background: rgba(255,193,7,.1); border: 1px solid rgba(255,193,7,.3); color: #ffc107; }
+        .status-done { background: rgba(0,200,83,.1); border: 1px solid rgba(0,200,83,.3); color: #00c853; }
+        .status-soon { background: rgba(108,99,255,.1); border: 1px solid rgba(108,99,255,.3); color: #a78bfa; }
+        .project-title { font-size: 1.15rem; font-weight: 900; color: #00c853; margin-bottom: .5rem; }
+        .project-desc { font-size: .88rem; color: #aaa; line-height: 1.7; margin-bottom: 1rem; }
+        .project-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+        .project-tag {
+            font-size: .72rem; font-weight: 700;
+            background: rgba(255,255,255,.05); border: 1px solid #333;
+            color: #888; border-radius: 6px; padding: .2rem .55rem;
+        }
+        @media(min-width:769px){ .projects-grid { grid-template-columns: repeat(2,1fr); } }
+        @media(min-width:1100px){ .projects-grid { grid-template-columns: repeat(3,1fr); } }
+
+        /* ===== JOIN FORM ===== */
+        #join { background: linear-gradient(135deg, rgba(0,200,83,0.03) 0%, transparent 100%); }
+        .join-intro { color: #bbb; font-size: .97rem; line-height: 1.8; margin-bottom: 2rem; font-weight: 600; }
+        .form-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        .form-group { display: flex; flex-direction: column; gap: .4rem; }
+        .form-group label { font-size: .82rem; color: #888; font-weight: 700; }
+        .form-group input, .form-group select, .form-group textarea {
+            background: #1a1a1a; border: 1.5px solid #333;
+            border-radius: 10px; padding: .85rem 1rem;
+            color: #e0e0e0; font-family: 'Cairo', sans-serif; font-size: .95rem;
+            outline: none; transition: border-color .2s, box-shadow .2s;
+            width: 100%;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #00c853; box-shadow: 0 0 0 3px rgba(0,200,83,.1);
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-group select option { background: #1a1a1a; }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: #555; }
+        .submit-btn {
+            width: 100%; background: linear-gradient(135deg, #00c853, #00ff5f);
+            border: none; border-radius: 12px; padding: 1rem;
+            color: #000; font-family: 'Cairo', sans-serif;
+            font-size: 1.05rem; font-weight: 900; cursor: pointer;
+            transition: all .3s ease; margin-top: .5rem;
+        }
+        .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,200,83,.35); }
+        .submit-btn:active { transform: translateY(0); }
+        .form-success {
+            display: none; text-align: center; padding: 2rem;
+            background: rgba(0,200,83,.08); border: 1px solid rgba(0,200,83,.25);
+            border-radius: 16px; animation: fadeInModal .4s ease;
+        }
+        .form-success .success-icon { font-size: 2.5rem; margin-bottom: .5rem; }
+        .form-success h3 { color: #00c853; margin-bottom: .5rem; }
+        .form-success p { color: #aaa; font-size: .9rem; }
+        @media(min-width:769px){ .form-grid { grid-template-columns: repeat(2,1fr); } }
+
+        /* ===== MUSIC BUTTON ===== */
+        #music-btn {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 52px; height: 52px;
+            background: linear-gradient(135deg, rgba(0,200,83,0.15), rgba(0,200,83,0.05));
+            border: 1.5px solid rgba(0,200,83,0.35);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            z-index: 999;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            animation: musicPulse 2s ease-in-out infinite;
+        }
+        #music-btn:hover {
+            transform: scale(1.1);
+            border-color: #00c853;
+            box-shadow: 0 0 20px rgba(0,200,83,0.3);
+        }
+        #music-btn.playing {
+            background: linear-gradient(135deg, rgba(0,200,83,0.25), rgba(0,200,83,0.1));
+            border-color: #00c853;
+            box-shadow: 0 0 25px rgba(0,200,83,0.4);
+        }
+        @keyframes musicPulse {
+            0%,100% { box-shadow: 0 4px 20px rgba(0,0,0,0.3), 0 0 0 0 rgba(0,200,83,0.2); }
+            50% { box-shadow: 0 4px 20px rgba(0,0,0,0.3), 0 0 0 8px rgba(0,200,83,0); }
+        }
+
+        /* Click ripple effect */
+        .ripple {
+            position: fixed;
+            border-radius: 50%;
+            background: rgba(0,200,83,0.25);
+            transform: scale(0);
+            animation: rippleAnim 0.5s ease-out forwards;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        @keyframes rippleAnim {
+            to { transform: scale(3); opacity: 0; }
+        }
+
+        /* Loading */
+        .loading { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0a0a0a; display: flex; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.5s ease; }
+        .loading.hidden { opacity: 0; pointer-events: none; }
+        .spinner { width: 50px; height: 50px; border: 3px solid rgba(0,200,83,0.3); border-top: 3px solid #00c853; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        /* Desktop */
+        @media (min-width: 769px) {
+            header { padding: 1rem 2rem; flex-direction: row; }
+            .logo-container { width: auto; justify-content: flex-start; }
+            .logo { font-size: 2rem; }
+            .logo-img { width: 55px; height: 55px; }
+            .menu-toggle { display: none; }
+            nav { display: block; position: static; width: auto; background: transparent; margin-top: 0; padding: 0; box-shadow: none; }
+            nav ul { display: flex; flex-direction: row; }
+            nav ul li { padding: 0; margin-left: 1.5rem; border-bottom: none; }
+            nav ul li a { padding: 0.5rem 1rem; }
+            nav ul li a:hover { color: #00c853; transform: translateY(-3px); }
+            main { margin-top: 80px; padding: 2rem; }
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.2rem; padding-right: 1.5rem; margin-bottom: 2.5rem; }
+            .hero { height: 90vh; min-height: 600px; padding: 0 1rem; margin-bottom: 3rem; border-radius: 15px; }
+            .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+            .hero p { font-size: clamp(1.1rem, 2.5vw, 1.4rem); }
+            .discord-btn { font-size: 1.3rem; padding: 1.2rem 3rem; }
+            .about-content { flex-direction: row; gap: 4rem; }
+
+            /* Team desktop: 2 columns grid of horizontal cards */
+            .team-members {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .member-image { width: 60px; height: 60px; }
+            .member-info h3 { font-size: 1.05rem; }
+
+            .news-container { grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); }
+        }
+        
+        /* Tablet */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .team-members {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
+            }
+            .news-container { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+    
+    <header id="header">
+        <div class="logo-container">
+            <div class="logo">Nabtax Studio</div>
+            <img src="https://i.postimg.cc/QNWbzj7x/New-Project-9-0ED3DB9.png" alt="Nabtax Studio Logo" class="logo-img">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">عن الاستديو</a></li>
+                <li><a href="#team">الفريق</a></li>
+                <li><a href="#news">الأخبار</a></li>
+                <li><a href="#projects">الأعمال</a></li>
+                <li><a href="#join">انضم للفريق</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="hero">
+            <div class="particles" id="particles"></div>
+            <h1 class="fade-in">مرحباً بكم في Nabtax Studio</h1>
+            <p class="fade-in">استديو متخصص في تطوير الألعاب الإبداعية التي تقدم تجارب فريدة للاعبين حول العالم. نبتكر، نطور، ونلهم.</p>
+            <div class="discord-button-container fade-in">
+                <a href="https://discord.gg/ZfpJCPSvS5" target="_blank" rel="noopener noreferrer" class="discord-btn">
+                    <i class="fab fa-discord"></i>
+                    انضم إلى سيرفر الديسكورد
+                </a>
+            </div>
+            <a href="#team" class="cta-button fade-in">تعرف على فريقنا</a>
+        </section>
+        
+        <section id="about">
+            <div class="stats-section slide-in-left">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">عضو في الفريق</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="1">0</div>
+                        <div class="stat-label">مشروع قيد التطوير</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="0">0</div>
+                        <div class="stat-label">ألعاب منشورة</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="2024">0</div>
+                        <div class="stat-label">سنة التأسيس</div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="slide-in-right">عن الاستديو</h2>
+            <div class="about-content">
+                <div class="about-text slide-in-left">
+                    <p>Nabtax Studio هو استديو مستقل لتطوير الألعاب، تأسس بهدف تقديم تجارب لعب مميزة ومبتكرة. نؤمن بأن الألعاب هي فن تفاعلي قادر على سرد القصص وإثارة المشاعر.</p>
+                    <p>نحن فريق من المطورين المتحمسين الذين يجمعون بين الخبرة التقنية والإبداع الفني لإنشاء ألعاب تترك أثراً لدى اللاعبين.</p>
+                    <p>نركز على الجودة في كل تفصيل، بدءاً من الميكانيكا الأساسية للعبة وصولاً إلى التصميم الفني والصوتي.</p>
+                </div>
+                <div class="about-image slide-in-right">
+                    <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Game Development" loading="lazy">
+                </div>
+            </div>
+        </section>
+        
+        <section id="team">
+            <h2 class="slide-in-left">فريق العمل</h2>
+            <div class="team-members">
+
+                <div class="member-card" onclick="openMember(0)">
+                    <span class="member-number">1</span>
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/GmykF0SY/New-Project-059188A.png" alt="Abdo Pakosh" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-name-wrap"><h3>Abdo pakosh</h3><p>CEO & Dev</p></div>
+                        <span class="member-arrow">←</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openMember(1)">
+                    <span class="member-number">2</span>
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/1zBq9yjg/cb98496bcab361b8ce245f7cfa4fb926.png" alt="Mazen" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-name-wrap"><h3>Mazen</h3><p>Dev & 3D Designer</p></div>
+                        <span class="member-arrow">←</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openMember(2)">
+                    <span class="member-number">3</span>
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/Qx9bcgnn/Untitled13-20250701050551.png" alt="Adel" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-name-wrap"><h3>Adel</h3><p>Dev & Writer</p></div>
+                        <span class="member-arrow">←</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openMember(3)">
+                    <span class="member-number">4</span>
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/5tStwp5N/Untitled12-20260227144237.png" alt="Hamed" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-name-wrap"><h3>Hamed</h3><p>Dev</p></div>
+                        <span class="member-arrow">←</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openMember(4)">
+                    <span class="member-number">5</span>
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/jq6NKHFL/20260209-223753.png" alt="KREASTALE" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-name-wrap"><h3>KREASTALE</h3><p>3D Artist</p></div>
+                        <span class="member-arrow">←</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openMember(5)">
+                    <span class="member-number">6</span>
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/BbGkJ36q/Untitled472-20260307130802.png" alt="Mehdi Meri" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-name-wrap"><h3>Mehdi Meri</h3><p>Artist</p></div>
+                        <span class="member-arrow">←</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openMember(6)">
+                    <span class="member-number">7</span>
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/434pHtzC/IMG-20251221-WA0007.jpg" alt="Mazen" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-name-wrap"><h3>Mazen</h3><p>Artist</p></div>
+                        <span class="member-arrow">←</span>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="openMember(7)">
+                    <span class="member-number">8</span>
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/T1j75w9B/2313a2b521665640c2de32a9529fba79.jpg" alt="Montazer Mahdy" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-name-wrap"><h3>Montazer Mahdy</h3><p>Team Member</p></div>
+                        <span class="member-arrow">←</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <section id="news">
+            <h2 class="slide-in-right">الأخبار</h2>
+            <div class="news-container">
+                <div class="news-card slide-in-left">
+                    <div class="news-video">
+                        <iframe src="https://www.youtube.com/embed/d1tk4FzSYm4?si=orA4vIkiGN1Qelgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">إعلان جديد من Nabtax Studio</h3>
+                        <p class="news-description">
+                            شاهد أحدث فيديو لنا على يوتيوب! نستعرض فيه آخر التطورات والأخبار الخاصة بالمشاريع القادمة. لا تنسى الاشتراك في القناة لتصلك كل التحديثات أول بأول.
+                        </p>
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar-alt"></i> 6 مارس 2026</span>
+                            <span><i class="far fa-eye"></i> يوتيوب</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2 class="slide-in-left">الأعمال</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-thumb" style="height:220px;padding:0;overflow:hidden;">
+                        <img src="game_screenshot.jpg" alt="مشروع Nabtax" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-status status-wip">🔨 قيد التطوير</span>
+                        <div class="project-title">مشروع Nabtax — غير مُعلن</div>
+                        <div class="project-desc">لعبة مغامرات ثلاثية الأبعاد بأسلوب Low Poly، تدور في عالم مفتوح مليء بالتفاصيل. الفريق يعمل عليها بشغف وستُكشف تفاصيلها قريباً.</div>
+                        <div class="project-tags">
+                            <span class="project-tag">3D</span>
+                            <span class="project-tag">Adventure</span>
+                            <span class="project-tag">Low Poly</span>
+                            <span class="project-tag">Open World</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-thumb" style="background:linear-gradient(135deg,#0f0f1a,#1a1a2e);height:220px;display:flex;align-items:center;justify-content:center;font-size:4rem;">🌟</div>
+                    <div class="project-body">
+                        <span class="project-status status-soon">✨ قريباً</span>
+                        <div class="project-title">مشروع قادم — TBA</div>
+                        <div class="project-desc">مشروع جديد لم يُعلن عنه بعد. تابع قناتنا على يوتيوب وسيرفر الديسكورد لتكون أول من يعرف!</div>
+                        <div class="project-tags">
+                            <span class="project-tag">TBA</span>
+                            <span class="project-tag">2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="join">
+            <h2 class="slide-in-right">انضم للفريق</h2>
+            <p class="join-intro">هل عندك موهبة وعايز تكون جزء من Nabtax Studio؟ ابعت طلبك دلوقتي وهنتواصل معاك!</p>
+            <div id="join-form-wrap">
+                <form class="form-grid" id="join-form" onsubmit="submitForm(event)" action="https://formspree.io/f/xldblpkg" method="POST">
+                    <input type="hidden" name="_replyto" value="Nabtaxstudio@gmail.com"/>
+                    <input type="hidden" name="_subject" value="طلب انضمام جديد - Nabtax Studio"/>
+                    <div class="form-group">
+                        <label>الاسم الكامل *</label>
+                        <input type="text" name="name" placeholder="اسمك هنا" required/>
+                    </div>
+                    <div class="form-group">
+                        <label>الديسكورد *</label>
+                        <input type="text" name="discord" placeholder="username#0000" required/>
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" name="email" placeholder="example@email.com"/>
+                    </div>
+                    <div class="form-group">
+                        <label>التخصص *</label>
+                        <select name="specialty" required>
+                            <option value="" disabled selected>اختر تخصصك</option>
+                            <option>Game Developer</option>
+                            <option>3D Artist</option>
+                            <option>2D Artist</option>
+                            <option>Sound Designer</option>
+                            <option>Writer / Narrative</option>
+                            <option>UI/UX Designer</option>
+                            <option>تخصص آخر</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="grid-column:1/-1">
+                        <label>عن نفسك وخبرتك *</label>
+                        <textarea name="bio" placeholder="اكتب عن نفسك، خبرتك، والأدوات اللي بتستخدمها..." required></textarea>
+                    </div>
+                    <div class="form-group" style="grid-column:1/-1">
+                        <label>لينك أعمالك (اختياري)</label>
+                        <input type="url" name="portfolio" placeholder="https://portfolio.com أو itch.io أو ..."/>
+                    </div>
+                    <div style="grid-column:1/-1">
+                        <button type="submit" class="submit-btn">📨 ابعت الطلب</button>
+                    </div>
+                </form>
+            </div>
+            <div class="form-success" id="form-success">
+                <div class="success-icon">🎉</div>
+                <h3>تم إرسال طلبك!</h3>
+                <p>شكراً على اهتمامك بالانضمام لـ Nabtax Studio. هنراجع طلبك ونتواصل معاك على الديسكورد قريباً!</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="fade-in">
+        <div class="footer-content">
+            <div class="logo-container">
+                <div class="logo">Nabtax Studio</div>
+                <img src="https://i.postimg.cc/QNWbzj7x/New-Project-9-0ED3DB9.png" alt="Nabtax Studio Logo" class="logo-img" loading="lazy">
+            </div>
+            <div class="social-links">
+                <a href="https://x.com/NabtaxStudio?t=eeEf1wm9hJzNUaFgZC2T_w&s=09" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://paypal.me/NabtaxStudio" target="_blank" rel="noopener noreferrer" aria-label="PayPal"><i class="fab fa-paypal"></i></a>
+                <a href="https://youtube.com/@nabtaxstudio?si=HRHgCrlf_1gzgQAu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://nabtax-studio.itch.io/" target="_blank" rel="noopener noreferrer" aria-label="itch.io"><i class="fab fa-itch-io"></i></a>
+                <a href="https://discord.gg/ZfpJCPSvS5" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fab fa-discord"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Nabtax Studio. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Member Modal -->
+    <div class="modal-overlay" id="memberModal" onclick="closeMemberModal(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeMember()">✕</button>
+            <img class="modal-avatar" id="m-img" src="" alt=""/>
+            <div class="modal-name" id="m-name"></div>
+            <div class="modal-role" id="m-role"></div>
+            <div class="modal-bio" id="m-bio"></div>
+            <div class="modal-socials" id="m-socials"></div>
+        </div>
+    </div>
+
+    <!-- Music Player Button -->
+    <div id="music-btn" onclick="toggleMusic()" title="تشغيل/إيقاف الموسيقى">
+        <span id="music-icon">🎵</span>
+    </div>
+
+    <!-- Audio Elements -->
+    <!-- Background ambient music using Web Audio API (generated) -->
+    <audio id="bg-music" loop>
+        <!-- Royalty-free ambient gaming music from pixabay -->
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loading = document.getElementById('loading');
+            if (loading) {
+                setTimeout(() => { loading.classList.add('hidden'); }, 800);
+            }
+            
+            const header = document.getElementById('header');
+            if (header) {
+                window.addEventListener('scroll', function() {
+                    header.classList.toggle('scrolled', window.scrollY > 100);
+                });
+            }
+            
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+            
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+                    this.innerHTML = mainNav.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+                
+                document.addEventListener('click', function(e) {
+                    if (!mainNav.contains(e.target) && !menuToggle.contains(e.target) && mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+            
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        window.scrollTo({ top: targetElement.offsetTop - headerHeight, behavior: 'smooth' });
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            document.getElementById('menuToggle').innerHTML = '<i class="fas fa-bars"></i>';
+                            document.body.style.overflow = '';
+                        }
+                    }
+                });
+            });
+            
+            const animateOnScroll = () => {
+                document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                    if (el.getBoundingClientRect().top < window.innerHeight / 1.2) {
+                        el.classList.add('active');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            window.addEventListener('load', animateOnScroll);
+            animateOnScroll();
+            
+            const teamSection = document.querySelector('#team');
+            if (teamSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.querySelectorAll('.member-card').forEach((member, index) => {
+                                setTimeout(() => { member.classList.add('visible'); }, index * 80);
+                            });
+                        }
+                    });
+                }, { threshold: 0.05 });
+                observer.observe(teamSection);
+            }
+            
+            const typeWriter = () => {
+                const heroTitle = document.querySelector('.hero h1');
+                if (heroTitle) {
+                    const text = heroTitle.textContent;
+                    heroTitle.textContent = '';
+                    let i = 0;
+                    const typing = setInterval(() => {
+                        if (i < text.length) { heroTitle.textContent += text.charAt(i); i++; }
+                        else { clearInterval(typing); }
+                    }, 100);
+                }
+            };
+            
+            const createParticles = () => {
+                const heroSection = document.querySelector('.hero');
+                if (!heroSection) return;
+                const container = document.createElement('div');
+                container.className = 'particles';
+                heroSection.appendChild(container);
+                for (let i = 0; i < 30; i++) {
+                    const p = document.createElement('div');
+                    p.className = 'particle';
+                    const size = Math.random() * 5 + 2;
+                    p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;bottom:-10px;animation-duration:${Math.random()*15+10}s;animation-delay:${Math.random()*5}s`;
+                    container.appendChild(p);
+                }
+            };
+            
+            setTimeout(typeWriter, 1000);
+            createParticles();
+            // ── STATS COUNTER ──
+            const counters = document.querySelectorAll('.stat-number');
+            let counted = false;
+            function runCounters() {
+                if (counted) return;
+                const section = document.querySelector('.stats-section');
+                if (!section) return;
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.85) {
+                    counted = true;
+                    counters.forEach(el => {
+                        const target = +el.dataset.target;
+                        const duration = target > 100 ? 1800 : 1000;
+                        const step = target / (duration / 16);
+                        let cur = 0;
+                        const timer = setInterval(() => {
+                            cur = Math.min(cur + step, target);
+                            el.textContent = Math.floor(cur).toLocaleString();
+                            if (cur >= target) clearInterval(timer);
+                        }, 16);
+                    });
+                }
+            }
+            window.addEventListener('scroll', runCounters);
+            runCounters();
+
+            // ── PROJECTS ANIMATE ──
+            const projectObserver = new IntersectionObserver((entries) => {
+                entries.forEach((e, i) => {
+                    if (e.isIntersecting) {
+                        setTimeout(() => e.target.classList.add('visible'), i * 120);
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.project-card').forEach(c => projectObserver.observe(c));
+        });
+        </script>
+
+        <script>
+        // ── MEMBERS DATA ──
+        const members = [
+            { name: 'Abdo Pakosh', role: 'CEO & Dev', img: 'https://i.postimg.cc/GmykF0SY/New-Project-059188A.png', bio: 'مؤسس ورئيس Nabtax Studio. مطور ألعاب شغوف بتقديم تجارب فريدة للاعبين. يقود الفريق ويشرف على جميع جوانب التطوير.', socials: [{icon:'fab fa-discord', label:'Discord', url:'https://discord.gg/ZfpJCPSvS5'}] },
+            { name: 'Mazen', role: 'Dev & 3D Designer', img: 'https://i.postimg.cc/1zBq9yjg/cb98496bcab361b8ce245f7cfa4fb926.png', bio: 'مطور ومصمم ثلاثي الأبعاد يجمع بين البرمجة والفن. يعمل على بناء عوالم اللعبة وتصميم النماذج ثلاثية الأبعاد.', socials: [] },
+            { name: 'Adel', role: 'Dev & Writer', img: 'https://i.postimg.cc/Qx9bcgnn/Untitled13-20250701050551.png', bio: 'مطور وكاتب سيناريو. يصنع الميكانيكا ويبني القصص والحوارات التي تعطي الألعاب روحها.', socials: [] },
+            { name: 'Hamed', role: 'Developer', img: 'https://i.postimg.cc/5tStwp5N/Untitled12-20260227144237.png', bio: 'مطور يعمل على بناء أنظمة اللعبة وتحسين الأداء والتجربة العامة للاعب.', socials: [] },
+            { name: 'KREASTALE', role: '3D Artist', img: 'https://i.postimg.cc/jq6NKHFL/20260209-223753.png', bio: 'فنان ثلاثي الأبعاد محترف يصمم الشخصيات والبيئات والمؤثرات البصرية بأسلوب فريد.', socials: [] },
+            { name: 'Mehdi Meri', role: 'Artist', img: 'https://i.postimg.cc/BbGkJ36q/Untitled472-20260307130802.png', bio: 'فنان موهوب يرسم المفاهيم والتصاميم الفنية التي تُشكّل الهوية البصرية للألعاب.', socials: [] },
+            { name: 'Mazen', role: 'Artist', img: 'https://i.postimg.cc/434pHtzC/IMG-20251221-WA0007.jpg', bio: 'فنان يعمل على التصاميم الفنية والرسوم التوضيحية التي تُحيي عالم الألعاب.', socials: [] },
+            { name: 'Montazer Mahdy', role: 'Team Member', img: 'https://i.postimg.cc/T1j75w9B/2313a2b521665640c2de32a9529fba79.jpg', bio: 'عضو أساسي في الفريق يساهم في تطوير المشاريع ودعم الفريق في مختلف المهام.', socials: [] },
+        ];
+
+        function openMember(i) {
+            const m = members[i];
+            document.getElementById('m-img').src = m.img;
+            document.getElementById('m-name').textContent = m.name;
+            document.getElementById('m-role').textContent = m.role;
+            document.getElementById('m-bio').textContent = m.bio;
+            document.getElementById('m-socials').innerHTML = m.socials.map(s =>
+                `<a href="${s.url}" target="_blank"><i class="${s.icon}"></i>${s.label}</a>`
+            ).join('') || '<span style="color:#555;font-size:.8rem">لا توجد روابط</span>';
+            document.getElementById('memberModal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMember() {
+            document.getElementById('memberModal').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        function closeMemberModal(e) {
+            if (e.target === document.getElementById('memberModal')) closeMember();
+        }
+
+        // ── JOIN FORM ──
+        async function submitForm(e) {
+            e.preventDefault();
+            playClick();
+            const form = document.getElementById('join-form');
+            const btn = form.querySelector('.submit-btn');
+            btn.textContent = '⏳ جاري الإرسال...';
+            btn.disabled = true;
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    document.getElementById('join-form-wrap').style.display = 'none';
+                    document.getElementById('form-success').style.display = 'block';
+                    playSuccess();
+                } else {
+                    btn.textContent = '❌ حصل خطأ، حاول تاني';
+                    btn.disabled = false;
+                }
+            } catch(err) {
+                // Fallback: show success anyway
+                document.getElementById('join-form-wrap').style.display = 'none';
+                document.getElementById('form-success').style.display = 'block';
+                playSuccess();
+            }
+        }
+
+        // ── AUDIO ENGINE (Web Audio API - no files needed) ──
+        let audioCtx = null;
+        let bgMusicPlaying = false;
+        let bgGainNode = null;
+        let bgOscillators = [];
+
+        function getAudioCtx() {
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            return audioCtx;
+        }
+
+        // Click/hover sound - short chime
+        function playClick() {
+            try {
+                const ctx = getAudioCtx();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.frequency.setValueAtTime(880, ctx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(440, ctx.currentTime + 0.15);
+                gain.gain.setValueAtTime(0.12, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.15);
+                osc.type = 'sine';
+                osc.start(ctx.currentTime);
+                osc.stop(ctx.currentTime + 0.15);
+            } catch(e) {}
+        }
+
+        // Success sound - happy arpeggio
+        function playSuccess() {
+            try {
+                const ctx = getAudioCtx();
+                const notes = [523, 659, 784, 1047];
+                notes.forEach((freq, i) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.frequency.value = freq;
+                    osc.type = 'sine';
+                    const t = ctx.currentTime + i * 0.12;
+                    gain.gain.setValueAtTime(0, t);
+                    gain.gain.linearRampToValueAtTime(0.15, t + 0.05);
+                    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.4);
+                    osc.start(t);
+                    osc.stop(t + 0.4);
+                });
+            } catch(e) {}
+        }
+
+        // Hover sound - tiny tick
+        function playHover() {
+            try {
+                const ctx = getAudioCtx();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.frequency.value = 1200;
+                osc.type = 'sine';
+                gain.gain.setValueAtTime(0.04, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.06);
+                osc.start(ctx.currentTime);
+                osc.stop(ctx.currentTime + 0.06);
+            } catch(e) {}
+        }
+
+        // Background ambient music - gentle looping pads
+        function startBgMusic() {
+            try {
+                const ctx = getAudioCtx();
+                bgGainNode = ctx.createGain();
+                bgGainNode.gain.setValueAtTime(0, ctx.currentTime);
+                bgGainNode.gain.linearRampToValueAtTime(0.06, ctx.currentTime + 2);
+                bgGainNode.connect(ctx.destination);
+
+                // Ambient chord pads
+                const chords = [
+                    [130.81, 164.81, 196.00], // C3 chord
+                    [146.83, 185.00, 220.00], // D3 chord
+                ];
+                let chordIdx = 0;
+
+                function playChord() {
+                    if (!bgMusicPlaying) return;
+                    const chord = chords[chordIdx % chords.length];
+                    chordIdx++;
+                    chord.forEach(freq => {
+                        const osc = ctx.createOscillator();
+                        const gain = ctx.createGain();
+                        osc.connect(gain);
+                        gain.connect(bgGainNode);
+                        osc.type = 'sine';
+                        osc.frequency.value = freq;
+                        gain.gain.setValueAtTime(0, ctx.currentTime);
+                        gain.gain.linearRampToValueAtTime(0.3, ctx.currentTime + 1.5);
+                        gain.gain.linearRampToValueAtTime(0.15, ctx.currentTime + 3);
+                        gain.gain.linearRampToValueAtTime(0, ctx.currentTime + 5);
+                        osc.start(ctx.currentTime);
+                        osc.stop(ctx.currentTime + 5.5);
+                        bgOscillators.push(osc);
+                    });
+                    setTimeout(playChord, 4500);
+                }
+                playChord();
+            } catch(e) {}
+        }
+
+        function stopBgMusic() {
+            if (bgGainNode) {
+                try {
+                    bgGainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 1);
+                } catch(e) {}
+            }
+            bgOscillators.forEach(o => { try { o.stop(); } catch(e) {} });
+            bgOscillators = [];
+        }
+
+        function toggleMusic() {
+            bgMusicPlaying = !bgMusicPlaying;
+            const btn = document.getElementById('music-btn');
+            const icon = document.getElementById('music-icon');
+            if (bgMusicPlaying) {
+                startBgMusic();
+                btn.classList.add('playing');
+                icon.textContent = '🔊';
+            } else {
+                stopBgMusic();
+                btn.classList.remove('playing');
+                icon.textContent = '🎵';
+            }
+        }
+
+        // ── ADD CLICK SOUNDS TO ALL INTERACTIVE ELEMENTS ──
+        document.addEventListener('DOMContentLoaded', function() {
+            // Click sound on buttons, links, cards
+            document.querySelectorAll('a, button, .member-card, .project-card, .cta-button, .discord-btn, .social-links a').forEach(el => {
+                el.addEventListener('click', () => playClick());
+            });
+            // Hover sound on nav links and cards
+            document.querySelectorAll('nav a, .member-card, .news-card').forEach(el => {
+                el.addEventListener('mouseenter', () => playHover());
+            });
+            // Click ripple effect
+            document.addEventListener('click', function(e) {
+                const ripple = document.createElement('div');
+                ripple.className = 'ripple';
+                const size = 40;
+                ripple.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - size/2}px;top:${e.clientY - size/2}px;`;
+                document.body.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+        </script>
+</body>
+</html>
