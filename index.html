@@ -10,15 +10,11 @@
     <meta name="description" content="Nabtax Studio هو استوديو مستقل لتطوير ألعاب الفيديو يقدم أفكار مبتكرة وتجارب ترفيهية ممتعة للاعبين.">
     <meta name="keywords" content="Nabtax Studio, تطوير ألعاب, استوديو ألعاب, ألعاب فيديو, جيمز, Indie Games, Game Development, Nabtax, مطور ألعاب, صناعة الألعاب, استوديو تطوير الألعاب">
     <meta name="author" content="Nabtax Studio">
-
-<!-- Open Graph (للسوشيال ميديا) -->
     <meta property="og:title" content="Nabtax Studio">
     <meta property="og:description" content="Nabtax Studio هو استوديو مستقل لتطوير ألعاب الفيديو بأفكار مبتكرة وتجارب جديدة.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nabtax.github.io/Nabtax-studio/">
     <meta property="og:image" content="https://nabtax.github.io/Nabtax-studio/preview.png">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Nabtax Studio">
     <meta name="twitter:description" content="Nabtax Studio هو استوديو مستقل لتطوير ألعاب الفيديو بأفكار مبتكرة وتجارب جديدة.">
@@ -39,11 +35,11 @@
             -webkit-text-size-adjust: 100%;
         }
         
-        /* Header Styles */
+        /* Header */
         header {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(0, 0, 0, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(26,26,26,0.95) 0%, rgba(0,0,0,0.9) 100%);
             padding: 0.8rem 1rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
             position: fixed;
             width: 100%;
             top: 0;
@@ -58,7 +54,7 @@
         
         header.scrolled {
             padding: 0.5rem 1rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
         }
         
         .logo-container {
@@ -82,11 +78,10 @@
             font-size: 1.5rem;
             font-weight: 900;
             color: #00c853;
-            text-shadow: 0 0 10px rgba(0, 200, 83, 0.5);
+            text-shadow: 0 0 10px rgba(0,200,83,0.5);
             letter-spacing: 1px;
         }
         
-        /* Mobile Menu */
         .menu-toggle {
             display: block;
             background: none;
@@ -102,13 +97,13 @@
             width: 100%;
             display: none;
             margin-top: 1rem;
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(10,10,10,0.95);
             border-radius: 0 0 10px 10px;
             padding: 0.5rem 0;
             position: absolute;
             left: 0;
             top: 100%;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
         
         nav.active {
@@ -129,7 +124,7 @@
         
         nav ul li {
             padding: 0.8rem 1.5rem;
-            border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+            border-bottom: 1px solid rgba(51,51,51,0.5);
         }
         
         nav ul li a {
@@ -142,7 +137,7 @@
             padding: 0.5rem 0;
         }
         
-        /* Main Content */
+        /* Main */
         main {
             margin-top: 70px;
             padding: 1rem;
@@ -150,7 +145,7 @@
         
         section {
             padding: 2.5rem 0;
-            border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+            border-bottom: 1px solid rgba(51,51,51,0.3);
         }
         
         h1, h2, h3 {
@@ -162,7 +157,7 @@
         h1 {
             font-size: 2rem;
             text-align: center;
-            text-shadow: 0 0 20px rgba(0, 200, 83, 0.3);
+            text-shadow: 0 0 20px rgba(0,200,83,0.3);
         }
         
         h2 {
@@ -172,7 +167,7 @@
             margin-bottom: 1.8rem;
         }
         
-        /* Hero Section */
+        /* Hero */
         .hero {
             height: auto;
             min-height: 80vh;
@@ -181,7 +176,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
             padding: 3rem 1rem;
             margin-bottom: 2rem;
             position: relative;
@@ -216,16 +211,16 @@
             font-size: 1rem;
             transition: all 0.4s ease;
             border: 3px solid transparent;
-            box-shadow: 0 10px 30px rgba(0, 200, 83, 0.3);
+            box-shadow: 0 10px 30px rgba(0,200,83,0.3);
             text-transform: uppercase;
             letter-spacing: 1px;
             position: relative;
             z-index: 2;
         }
         
-        .cta-button:hover, .submit-btn:hover {
+        .cta-button:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(0, 200, 83, 0.5);
+            box-shadow: 0 15px 40px rgba(0,200,83,0.5);
         }
         
         .hero::after {
@@ -239,36 +234,27 @@
             z-index: 1;
         }
         
-        /* تأثيرات الجسيمات المتحركة */
         .particles {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             overflow: hidden;
             z-index: 1;
         }
         
         .particle {
             position: absolute;
-            background: rgba(0, 200, 83, 0.5);
+            background: rgba(0,200,83,0.5);
             border-radius: 50%;
             animation: float linear infinite;
         }
         
         @keyframes float {
-            0% {
-                transform: translateY(0) translateX(0);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-1000px) translateX(200px);
-                opacity: 0;
-            }
+            0% { transform: translateY(0) translateX(0); opacity: 1; }
+            100% { transform: translateY(-1000px) translateX(200px); opacity: 0; }
         }
         
-        /* About Section */
+        /* About */
         .about-content {
             display: flex;
             flex-direction: column;
@@ -287,13 +273,11 @@
             margin-top: 1rem;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
             transition: transform 0.5s ease;
         }
         
-        .about-image:hover {
-            transform: scale(1.02);
-        }
+        .about-image:hover { transform: scale(1.02); }
         
         .about-image img {
             width: 100%;
@@ -302,52 +286,55 @@
             transition: transform 0.5s ease;
         }
         
-        .about-image:hover img {
-            transform: scale(1.05);
-        }
+        .about-image:hover img { transform: scale(1.05); }
         
-        /* Team Section */
+        /* ===== TEAM - Compact Horizontal Cards ===== */
         .team-members {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
         }
         
         .member-card {
-            background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%);
-            border-radius: 15px;
+            background: linear-gradient(145deg, #1e1e1e 0%, #252525 100%);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            border-top: 4px solid #00c853;
-            transform: translateY(20px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border-right: 4px solid #00c853;
+            transform: translateX(20px);
             opacity: 0;
-            transition: all 0.8s ease;
+            transition: all 0.6s ease;
+            display: flex;
+            align-items: center;
+            padding: 0.7rem 1rem;
+            gap: 1rem;
         }
         
         .member-card.visible {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
         }
         
         .member-card:hover {
-            transform: translateY(-10px) !important;
-            box-shadow: 0 20px 50px rgba(0, 200, 83, 0.3) !important;
+            transform: translateX(-5px) !important;
+            box-shadow: 0 8px 25px rgba(0,200,83,0.25) !important;
+            border-right-color: #00ff5f;
+            background: linear-gradient(145deg, #222 0%, #2a2a2a 100%);
         }
         
         .member-image {
-            width: 120px;
-            height: 120px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
-            margin: 1.5rem auto;
             overflow: hidden;
-            border: 4px solid #00c853;
+            border: 2.5px solid #00c853;
+            flex-shrink: 0;
             transition: all 0.3s ease;
         }
         
-        .member-image:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 30px rgba(0, 200, 83, 0.5);
+        .member-card:hover .member-image {
+            box-shadow: 0 0 15px rgba(0,200,83,0.5);
+            transform: scale(1.08);
         }
         
         .member-image img {
@@ -357,54 +344,52 @@
         }
         
         .member-info {
-            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
         }
         
         .member-info h3 {
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
+            margin-bottom: 0;
+            font-size: 1rem;
+            color: #00c853;
+            font-weight: 700;
         }
         
         .member-info p {
-            color: #b0b0b0;
+            color: #888;
             font-style: italic;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.85rem;
+            text-align: left;
+        }
+
+        .member-number {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: rgba(0,200,83,0.12);
+            border: 1px solid rgba(0,200,83,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #00c853;
+            flex-shrink: 0;
         }
         
-        /* تأثيرات الظهور */
-        .fade-in {
-            opacity: 0;
-            transition: opacity 0.8s ease;
-        }
+        /* Animations */
+        .fade-in { opacity: 0; transition: opacity 0.8s ease; }
+        .fade-in.active { opacity: 1; }
+        .slide-in-left { opacity: 0; transform: translateX(-50px); transition: all 0.8s ease; }
+        .slide-in-left.active { opacity: 1; transform: translateX(0); }
+        .slide-in-right { opacity: 0; transform: translateX(50px); transition: all 0.8s ease; }
+        .slide-in-right.active { opacity: 1; transform: translateX(0); }
         
-        .fade-in.active {
-            opacity: 1;
-        }
-        
-        .slide-in-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: all 0.8s ease;
-        }
-        
-        .slide-in-left.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        .slide-in-right {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: all 0.8s ease;
-        }
-        
-        .slide-in-right.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        /* Discord Button Styles */
+        /* Discord */
         .discord-button-container {
             margin-top: 1.5rem;
             margin-bottom: 1rem;
@@ -427,28 +412,16 @@
             font-size: 1.2rem;
             transition: all 0.4s ease;
             border: 3px solid transparent;
-            box-shadow: 0 10px 30px rgba(88, 101, 242, 0.4);
+            box-shadow: 0 10px 30px rgba(88,101,242,0.4);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         
-        .discord-btn i {
-            font-size: 1.8rem;
-            transition: transform 0.3s ease;
-        }
+        .discord-btn i { font-size: 1.8rem; transition: transform 0.3s ease; }
+        .discord-btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 40px rgba(88,101,242,0.6); background: #4752C4; border-color: #ffffff30; }
+        .discord-btn:hover i { transform: rotate(10deg) scale(1.1); }
         
-        .discord-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(88, 101, 242, 0.6);
-            background: #4752C4;
-            border-color: #ffffff30;
-        }
-        
-        .discord-btn:hover i {
-            transform: rotate(10deg) scale(1.1);
-        }
-        
-        /* News Section Styles */
+        /* News */
         .news-container {
             display: grid;
             grid-template-columns: 1fr;
@@ -460,64 +433,33 @@
             background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             border: 1px solid #333;
             transition: all 0.4s ease;
         }
         
-        .news-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 200, 83, 0.3);
-            border-color: #00c853;
-        }
+        .news-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,200,83,0.3); border-color: #00c853; }
         
         .news-video {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             background: #000;
             overflow: hidden;
         }
         
         .news-video iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             border: none;
         }
         
-        .news-content {
-            padding: 2rem;
-        }
-        
-        .news-title {
-            font-size: 1.5rem;
-            color: #00c853;
-            margin-bottom: 1rem;
-            font-weight: 900;
-        }
-        
-        .news-description {
-            color: #e0e0e0;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            font-weight: 600;
-        }
-        
-        .news-meta {
-            display: flex;
-            gap: 1rem;
-            color: #b0b0b0;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-        
-        .news-meta i {
-            color: #00c853;
-            margin-left: 0.3rem;
-        }
+        .news-content { padding: 2rem; }
+        .news-title { font-size: 1.5rem; color: #00c853; margin-bottom: 1rem; font-weight: 900; }
+        .news-description { color: #e0e0e0; margin-bottom: 1.5rem; line-height: 1.8; font-weight: 600; }
+        .news-meta { display: flex; gap: 1rem; color: #b0b0b0; font-size: 0.9rem; font-weight: 600; }
+        .news-meta i { color: #00c853; margin-left: 0.3rem; }
         
         /* Footer */
         footer {
@@ -527,206 +469,78 @@
             border-top: 3px solid #00c853;
         }
         
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        .footer-content { max-width: 1200px; margin: 0 auto; }
         
         .footer-content .logo-container {
             justify-content: center;
+            width: auto;
             margin-bottom: 1.5rem;
         }
         
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1.5rem 0;
-            flex-wrap: wrap;
-        }
+        .social-links { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap; }
         
         .social-links a {
             color: #e0e0e0;
             font-size: 1.5rem;
             transition: all 0.3s ease;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 50px; height: 50px;
+            display: flex; align-items: center; justify-content: center;
             border-radius: 50%;
-            background: rgba(0, 200, 83, 0.1);
+            background: rgba(0,200,83,0.1);
             text-decoration: none;
         }
         
-        .social-links a:hover {
-            transform: translateY(-5px) scale(1.2);
-            color: #00c853;
-            background: rgba(0, 200, 83, 0.2);
-            box-shadow: 0 5px 15px rgba(0, 200, 83, 0.3);
-        }
+        .social-links a:hover { transform: translateY(-5px) scale(1.2); color: #00c853; background: rgba(0,200,83,0.2); box-shadow: 0 5px 15px rgba(0,200,83,0.3); }
+        .copyright { color: #b0b0b0; font-size: 1rem; font-weight: 600; }
         
-        .copyright {
-            color: #b0b0b0;
-            font-size: 1rem;
-            font-weight: 600;
-        }
+        /* Loading */
+        .loading { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0a0a0a; display: flex; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.5s ease; }
+        .loading.hidden { opacity: 0; pointer-events: none; }
+        .spinner { width: 50px; height: 50px; border: 3px solid rgba(0,200,83,0.3); border-top: 3px solid #00c853; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         
-        /* Desktop Styles */
+        /* Desktop */
         @media (min-width: 769px) {
-            header {
-                padding: 1rem 2rem;
-                flex-direction: row;
-            }
-            
-            .logo-container {
-                width: auto;
-                justify-content: flex-start;
-            }
-            
-            .logo {
-                font-size: 2rem;
-            }
-            
-            .logo-img {
-                width: 55px;
-                height: 55px;
-            }
-            
-            .menu-toggle {
-                display: none;
-            }
-            
-            nav {
-                display: block;
-                position: static;
-                width: auto;
-                background: transparent;
-                margin-top: 0;
-                padding: 0;
-                box-shadow: none;
-            }
-            
-            nav ul {
-                display: flex;
-                flex-direction: row;
-            }
-            
-            nav ul li {
-                padding: 0;
-                margin-left: 1.5rem;
-                border-bottom: none;
-            }
-            
-            nav ul li a {
-                padding: 0.5rem 1rem;
-            }
-            
-            nav ul li a:hover {
-                color: #00c853;
-                transform: translateY(-3px);
-            }
-            
-            main {
-                margin-top: 80px;
-                padding: 2rem;
-            }
-            
-            h1 {
-                font-size: 3rem;
-            }
-            
-            h2 {
-                font-size: 2.2rem;
-                padding-right: 1.5rem;
-                margin-bottom: 2.5rem;
-            }
-            
-            .hero {
-                height: 90vh;
-                min-height: 600px;
-                padding: 0 1rem;
-                margin-bottom: 3rem;
-                border-radius: 15px;
-            }
-            
-            .hero h1 {
-                font-size: clamp(2.5rem, 6vw, 4rem);
-            }
-            
-            .hero p {
-                font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-            }
-            
-            .discord-btn {
-                font-size: 1.3rem;
-                padding: 1.2rem 3rem;
-            }
-            
-            .about-content {
-                flex-direction: row;
-                gap: 4rem;
-            }
-            
+            header { padding: 1rem 2rem; flex-direction: row; }
+            .logo-container { width: auto; justify-content: flex-start; }
+            .logo { font-size: 2rem; }
+            .logo-img { width: 55px; height: 55px; }
+            .menu-toggle { display: none; }
+            nav { display: block; position: static; width: auto; background: transparent; margin-top: 0; padding: 0; box-shadow: none; }
+            nav ul { display: flex; flex-direction: row; }
+            nav ul li { padding: 0; margin-left: 1.5rem; border-bottom: none; }
+            nav ul li a { padding: 0.5rem 1rem; }
+            nav ul li a:hover { color: #00c853; transform: translateY(-3px); }
+            main { margin-top: 80px; padding: 2rem; }
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.2rem; padding-right: 1.5rem; margin-bottom: 2.5rem; }
+            .hero { height: 90vh; min-height: 600px; padding: 0 1rem; margin-bottom: 3rem; border-radius: 15px; }
+            .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+            .hero p { font-size: clamp(1.1rem, 2.5vw, 1.4rem); }
+            .discord-btn { font-size: 1.3rem; padding: 1.2rem 3rem; }
+            .about-content { flex-direction: row; gap: 4rem; }
+
+            /* Team desktop: 2 columns grid of horizontal cards */
             .team-members {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 2.5rem;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
             }
-            
-            .member-image {
-                width: 160px;
-                height: 160px;
-                margin: 2rem auto;
-            }
-            
-            .news-container {
-                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            }
+
+            .member-image { width: 60px; height: 60px; }
+            .member-info h3 { font-size: 1.05rem; }
+
+            .news-container { grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); }
         }
         
-        /* Tablet Styles */
+        /* Tablet */
         @media (min-width: 481px) and (max-width: 768px) {
             .team-members {
+                display: grid;
                 grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
             }
-            
-            .news-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        /* Loading Animation */
-        .loading {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #0a0a0a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-        
-        .loading.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(0, 200, 83, 0.3);
-            border-top: 3px solid #00c853;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            .news-container { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -759,15 +573,12 @@
             <div class="particles" id="particles"></div>
             <h1 class="fade-in">مرحباً بكم في Nabtax Studio</h1>
             <p class="fade-in">استديو متخصص في تطوير الألعاب الإبداعية التي تقدم تجارب فريدة للاعبين حول العالم. نبتكر، نطور، ونلهم.</p>
-            
-            <!-- زر الديسكورد في بداية الموقع -->
             <div class="discord-button-container fade-in">
                 <a href="https://discord.gg/ZfpJCPSvS5" target="_blank" rel="noopener noreferrer" class="discord-btn">
                     <i class="fab fa-discord"></i>
                     انضم إلى سيرفر الديسكورد
                 </a>
             </div>
-            
             <a href="#team" class="cta-button fade-in">تعرف على فريقنا</a>
         </section>
         
@@ -788,7 +599,9 @@
         <section id="team">
             <h2 class="slide-in-left">فريق العمل</h2>
             <div class="team-members">
+
                 <div class="member-card">
+                    <span class="member-number">1</span>
                     <div class="member-image">
                         <img src="https://i.postimg.cc/GmykF0SY/New-Project-059188A.png" alt="Abdo Pakosh" loading="lazy">
                     </div>
@@ -797,7 +610,9 @@
                         <p>CEO & Dev</p>
                     </div>
                 </div>
+
                 <div class="member-card">
+                    <span class="member-number">2</span>
                     <div class="member-image">
                         <img src="https://i.postimg.cc/1zBq9yjg/cb98496bcab361b8ce245f7cfa4fb926.png" alt="Mazen" loading="lazy">
                     </div>
@@ -806,16 +621,20 @@
                         <p>Dev & 3D Designer</p>
                     </div>
                 </div>
+
                 <div class="member-card">
+                    <span class="member-number">3</span>
                     <div class="member-image">
                         <img src="https://i.postimg.cc/Qx9bcgnn/Untitled13-20250701050551.png" alt="Adel" loading="lazy">
                     </div>
                     <div class="member-info">
                         <h3>Adel</h3>
-                        <p>Dev & writer</p>
+                        <p>Dev & Writer</p>
                     </div>
                 </div>
+
                 <div class="member-card">
+                    <span class="member-number">4</span>
                     <div class="member-image">
                         <img src="https://i.postimg.cc/5tStwp5N/Untitled12-20260227144237.png" alt="Hamed" loading="lazy">
                     </div>
@@ -824,7 +643,9 @@
                         <p>Dev</p>
                     </div>
                 </div>
+
                 <div class="member-card">
+                    <span class="member-number">5</span>
                     <div class="member-image">
                         <img src="https://i.postimg.cc/jq6NKHFL/20260209-223753.png" alt="KREASTALE" loading="lazy">
                     </div>
@@ -832,8 +653,10 @@
                         <h3>KREASTALE</h3>
                         <p>3D Artist</p>
                     </div>
-               </div>
+                </div>
+
                 <div class="member-card">
+                    <span class="member-number">6</span>
                     <div class="member-image">
                         <img src="https://i.postimg.cc/BbGkJ36q/Untitled472-20260307130802.png" alt="Mehdi Meri" loading="lazy">
                     </div>
@@ -842,7 +665,9 @@
                         <p>Artist</p>
                     </div>
                 </div>
+
                 <div class="member-card">
+                    <span class="member-number">7</span>
                     <div class="member-image">
                         <img src="https://i.postimg.cc/434pHtzC/IMG-20251221-WA0007.jpg" alt="Mazen" loading="lazy">
                     </div>
@@ -851,16 +676,26 @@
                         <p>Artist</p>
                     </div>
                 </div>
+
+                <div class="member-card">
+                    <span class="member-number">8</span>
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/T1j75w9B/2313a2b521665640c2de32a9529fba79.jpg" alt="Montazer Mahdy" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Montazer Mahdy</h3>
+                        <p>Team Member</p>
+                    </div>
+                </div>
+
             </div>
         </section>
         
-        <!-- قسم الأخبار مع الفيديو المطلوب -->
         <section id="news">
             <h2 class="slide-in-right">الأخبار</h2>
             <div class="news-container">
                 <div class="news-card slide-in-left">
                     <div class="news-video">
-                        <!-- فيديو اليوتيوب المطلوب -->
                         <iframe src="https://www.youtube.com/embed/d1tk4FzSYm4?si=orA4vIkiGN1Qelgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div class="news-content">
@@ -877,7 +712,6 @@
             </div>
         </section>
         
-        <!-- قسم الأعمال -->
         <section id="projects">
             <h2 class="slide-in-left">الأعمال</h2>
             <!-- سيتم إضافة المحتوى لاحقًا -->
@@ -895,7 +729,6 @@
                 <a href="https://paypal.me/NabtaxStudio" target="_blank" rel="noopener noreferrer" aria-label="PayPal"><i class="fab fa-paypal"></i></a>
                 <a href="https://youtube.com/@nabtaxstudio?si=HRHgCrlf_1gzgQAu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 <a href="https://nabtax-studio.itch.io/" target="_blank" rel="noopener noreferrer" aria-label="itch.io"><i class="fab fa-itch-io"></i></a>
-                <!-- رابط الديسكورد في الفوتر أيضاً -->
                 <a href="https://discord.gg/ZfpJCPSvS5" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fab fa-discord"></i></a>
             </div>
             <div class="copyright">
@@ -905,28 +738,19 @@
     </footer>
     
     <script>
-        // Loading screen
         document.addEventListener('DOMContentLoaded', function() {
             const loading = document.getElementById('loading');
             if (loading) {
-                setTimeout(() => {
-                    loading.classList.add('hidden');
-                }, 800);
+                setTimeout(() => { loading.classList.add('hidden'); }, 800);
             }
             
-            // Header scroll effect
             const header = document.getElementById('header');
             if (header) {
                 window.addEventListener('scroll', function() {
-                    if (window.scrollY > 100) {
-                        header.classList.add('scrolled');
-                    } else {
-                        header.classList.remove('scrolled');
-                    }
+                    header.classList.toggle('scrolled', window.scrollY > 100);
                 });
             }
             
-            // Mobile menu toggle
             const menuToggle = document.getElementById('menuToggle');
             const mainNav = document.getElementById('mainNav');
             
@@ -937,7 +761,6 @@
                     this.innerHTML = mainNav.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
                 });
                 
-                // Close menu when clicking outside
                 document.addEventListener('click', function(e) {
                     if (!mainNav.contains(e.target) && !menuToggle.contains(e.target) && mainNav.classList.contains('active')) {
                         mainNav.classList.remove('active');
@@ -947,24 +770,14 @@
                 });
             }
             
-            // Smooth scrolling for navigation links
             document.querySelectorAll('nav a').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
                     const targetId = this.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
-                    
                     if (targetElement) {
                         const headerHeight = document.querySelector('header').offsetHeight;
-                        const targetPosition = targetElement.offsetTop - headerHeight;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
+                        window.scrollTo({ top: targetElement.offsetTop - headerHeight, behavior: 'smooth' });
                         if (mainNav && mainNav.classList.contains('active')) {
                             mainNav.classList.remove('active');
                             document.getElementById('menuToggle').innerHTML = '<i class="fas fa-bars"></i>';
@@ -974,329 +787,63 @@
                 });
             });
             
-            // Intersection Observer for scroll animations
             const animateOnScroll = () => {
-                const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
-                
-                elements.forEach(element => {
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const screenPosition = window.innerHeight / 1.2;
-                    
-                    if (elementPosition < screenPosition) {
-                        element.classList.add('active');
+                document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                    if (el.getBoundingClientRect().top < window.innerHeight / 1.2) {
+                        el.classList.add('active');
                     }
                 });
             };
             
             window.addEventListener('scroll', animateOnScroll);
             window.addEventListener('load', animateOnScroll);
+            animateOnScroll();
             
-            // Animate team members
             const teamSection = document.querySelector('#team');
             if (teamSection) {
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            const members = entry.target.querySelectorAll('.member-card');
-                            members.forEach((member, index) => {
-                                setTimeout(() => {
-                                    member.classList.add('visible');
-                                }, index * 200);
+                            entry.target.querySelectorAll('.member-card').forEach((member, index) => {
+                                setTimeout(() => { member.classList.add('visible'); }, index * 80);
                             });
                         }
                     });
-                }, {
-                    threshold: 0.1
-                });
-                
+                }, { threshold: 0.05 });
                 observer.observe(teamSection);
             }
             
-            // Typewriter effect for hero title
             const typeWriter = () => {
                 const heroTitle = document.querySelector('.hero h1');
                 if (heroTitle) {
                     const text = heroTitle.textContent;
                     heroTitle.textContent = '';
-                    
                     let i = 0;
                     const typing = setInterval(() => {
-                        if (i < text.length) {
-                            heroTitle.textContent += text.charAt(i);
-                            i++;
-                        } else {
-                            clearInterval(typing);
-                        }
+                        if (i < text.length) { heroTitle.textContent += text.charAt(i); i++; }
+                        else { clearInterval(typing); }
                     }, 100);
                 }
             };
             
-            // Create particles effect
             const createParticles = () => {
                 const heroSection = document.querySelector('.hero');
                 if (!heroSection) return;
-                
-                const particlesContainer = document.createElement('div');
-                particlesContainer.className = 'particles';
-                particlesContainer.id = 'particles';
-                heroSection.appendChild(particlesContainer);
-                
-                const particleCount = 30;
-                
-                for (let i = 0; i < particleCount; i++) {
-                    const particle = document.createElement('div');
-                    particle.className = 'particle';
-                    
+                const container = document.createElement('div');
+                container.className = 'particles';
+                heroSection.appendChild(container);
+                for (let i = 0; i < 30; i++) {
+                    const p = document.createElement('div');
+                    p.className = 'particle';
                     const size = Math.random() * 5 + 2;
-                    const posX = Math.random() * window.innerWidth;
-                    const duration = Math.random() * 15 + 10;
-                    const delay = Math.random() * 5;
-                    
-                    particle.style.width = `${size}px`;
-                    particle.style.height = `${size}px`;
-                    particle.style.left = `${posX}px`;
-                    particle.style.bottom = `-10px`;
-                    particle.style.animationDuration = `${duration}s`;
-                    particle.style.animationDelay = `${delay}s`;
-                    
-                    particlesContainer.appendChild(particle);
+                    p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;bottom:-10px;animation-duration:${Math.random()*15+10}s;animation-delay:${Math.random()*5}s`;
+                    container.appendChild(p);
                 }
             };
             
-            // Add hover/touch effects to member cards
-            const memberCards = document.querySelectorAll('.member-card');
-            memberCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px)';
-                    this.style.boxShadow = '0 15px 30px rgba(0, 200, 83, 0.4)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
-                });
-                
-                // Touch devices
-                card.addEventListener('touchstart', function() {
-                    this.style.transform = 'translateY(-10px)';
-                    this.style.boxShadow = '0 15px 30px rgba(0, 200, 83, 0.4)';
-                }, {passive: true});
-                
-                card.addEventListener('touchend', function() {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
-                }, {passive: true});
-            });
-            
-            // Initialize effects
             setTimeout(typeWriter, 1000);
             createParticles();
         });
     </script>
 </body>
-</html>            </div>
-            <div class="social-links">
-                <a href="https://x.com/NabtaxStudio?t=eeEf1wm9hJzNUaFgZC2T_w&s=09" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://paypal.me/NabtaxStudio" target="_blank" rel="noopener noreferrer" aria-label="PayPal"><i class="fab fa-paypal"></i></a>
-                <a href="https://youtube.com/@nabtaxstudio?si=HRHgCrlf_1gzgQAu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://nabtax-studio.itch.io/" target="_blank" rel="noopener noreferrer" aria-label="itch.io"><i class="fab fa-itch-io"></i></a>
-                <!-- رابط الديسكورد في الفوتر أيضاً -->
-                <a href="https://discord.gg/ZfpJCPSvS5" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fab fa-discord"></i></a>
-            </div>
-            <div class="copyright">
-                &copy; 2026 Nabtax Studio. جميع الحقوق محفوظة.
-            </div>
-        </div>
-    </footer>
-    
-    <script>
-        // Loading screen
-        document.addEventListener('DOMContentLoaded', function() {
-            const loading = document.getElementById('loading');
-            if (loading) {
-                setTimeout(() => {
-                    loading.classList.add('hidden');
-                }, 800);
-            }
-            
-            // Header scroll effect
-            const header = document.getElementById('header');
-            if (header) {
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > 100) {
-                        header.classList.add('scrolled');
-                    } else {
-                        header.classList.remove('scrolled');
-                    }
-                });
-            }
-            
-            // Mobile menu toggle
-            const menuToggle = document.getElementById('menuToggle');
-            const mainNav = document.getElementById('mainNav');
-            
-            if (menuToggle && mainNav) {
-                menuToggle.addEventListener('click', function() {
-                    mainNav.classList.toggle('active');
-                    document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
-                    this.innerHTML = mainNav.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-                });
-                
-                // Close menu when clicking outside
-                document.addEventListener('click', function(e) {
-                    if (!mainNav.contains(e.target) && !menuToggle.contains(e.target) && mainNav.classList.contains('active')) {
-                        mainNav.classList.remove('active');
-                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                        document.body.style.overflow = '';
-                    }
-                });
-            }
-            
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('nav a').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        const targetPosition = targetElement.offsetTop - headerHeight;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        if (mainNav && mainNav.classList.contains('active')) {
-                            mainNav.classList.remove('active');
-                            document.getElementById('menuToggle').innerHTML = '<i class="fas fa-bars"></i>';
-                            document.body.style.overflow = '';
-                        }
-                    }
-                });
-            });
-            
-            // Intersection Observer for scroll animations
-            const animateOnScroll = () => {
-                const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
-                
-                elements.forEach(element => {
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const screenPosition = window.innerHeight / 1.2;
-                    
-                    if (elementPosition < screenPosition) {
-                        element.classList.add('active');
-                    }
-                });
-            };
-            
-            window.addEventListener('scroll', animateOnScroll);
-            window.addEventListener('load', animateOnScroll);
-            
-            // Animate team members
-            const teamSection = document.querySelector('#team');
-            if (teamSection) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const members = entry.target.querySelectorAll('.member-card');
-                            members.forEach((member, index) => {
-                                setTimeout(() => {
-                                    member.classList.add('visible');
-                                }, index * 200);
-                            });
-                        }
-                    });
-                }, {
-                    threshold: 0.1
-                });
-                
-                observer.observe(teamSection);
-            }
-            
-            // Typewriter effect for hero title
-            const typeWriter = () => {
-                const heroTitle = document.querySelector('.hero h1');
-                if (heroTitle) {
-                    const text = heroTitle.textContent;
-                    heroTitle.textContent = '';
-                    
-                    let i = 0;
-                    const typing = setInterval(() => {
-                        if (i < text.length) {
-                            heroTitle.textContent += text.charAt(i);
-                            i++;
-                        } else {
-                            clearInterval(typing);
-                        }
-                    }, 100);
-                }
-            };
-            
-            // Create particles effect
-            const createParticles = () => {
-                const heroSection = document.querySelector('.hero');
-                if (!heroSection) return;
-                
-                const particlesContainer = document.createElement('div');
-                particlesContainer.className = 'particles';
-                particlesContainer.id = 'particles';
-                heroSection.appendChild(particlesContainer);
-                
-                const particleCount = 30;
-                
-                for (let i = 0; i < particleCount; i++) {
-                    const particle = document.createElement('div');
-                    particle.className = 'particle';
-                    
-                    const size = Math.random() * 5 + 2;
-                    const posX = Math.random() * window.innerWidth;
-                    const duration = Math.random() * 15 + 10;
-                    const delay = Math.random() * 5;
-                    
-                    particle.style.width = `${size}px`;
-                    particle.style.height = `${size}px`;
-                    particle.style.left = `${posX}px`;
-                    particle.style.bottom = `-10px`;
-                    particle.style.animationDuration = `${duration}s`;
-                    particle.style.animationDelay = `${delay}s`;
-                    
-                    particlesContainer.appendChild(particle);
-                }
-            };
-            
-            // Add hover/touch effects to member cards
-            const memberCards = document.querySelectorAll('.member-card');
-            memberCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px)';
-                    this.style.boxShadow = '0 15px 30px rgba(0, 200, 83, 0.4)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
-                });
-                
-                // Touch devices
-                card.addEventListener('touchstart', function() {
-                    this.style.transform = 'translateY(-10px)';
-                    this.style.boxShadow = '0 15px 30px rgba(0, 200, 83, 0.4)';
-                }, {passive: true});
-                
-                card.addEventListener('touchend', function() {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
-                }, {passive: true});
-            });
-            
-            // Initialize effects
-            setTimeout(typeWriter, 1000);
-            createParticles();
-        });
-    </script>
-</body>
-    </html>
+</html>
