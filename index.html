@@ -20,12 +20,8 @@
     <meta name="twitter:description" content="Nabtax Studio هو استوديو مستقل لتطوير ألعاب الفيديو بأفكار مبتكرة وتجارب جديدة.">
     <meta name="twitter:image" content="https://nabtax.github.io/Nabtax-studio/preview.png">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: 'Cairo', sans-serif;
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
@@ -34,7 +30,7 @@
             overflow-x: hidden;
             -webkit-text-size-adjust: 100%;
         }
-        
+
         /* Header */
         header {
             background: linear-gradient(135deg, rgba(26,26,26,0.95) 0%, rgba(0,0,0,0.9) 100%);
@@ -51,12 +47,9 @@
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
-        
-        header.scrolled {
-            padding: 0.5rem 1rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-        }
-        
+
+        header.scrolled { padding: 0.5rem 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.6); }
+
         .logo-container {
             display: flex;
             align-items: center;
@@ -64,16 +57,15 @@
             width: 100%;
             justify-content: space-between;
         }
-        
+
         .logo-img {
-            width: 45px;
-            height: 45px;
+            width: 45px; height: 45px;
             border-radius: 50%;
             border: 3px solid #00c853;
             object-fit: cover;
             transition: all 0.3s ease;
         }
-        
+
         .logo {
             font-size: 1.5rem;
             font-weight: 900;
@@ -81,7 +73,7 @@
             text-shadow: 0 0 10px rgba(0,200,83,0.5);
             letter-spacing: 1px;
         }
-        
+
         .menu-toggle {
             display: block;
             background: none;
@@ -92,7 +84,7 @@
             transition: all 0.3s ease;
             padding: 0.5rem;
         }
-        
+
         nav {
             width: 100%;
             display: none;
@@ -105,28 +97,16 @@
             top: 100%;
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
-        
-        nav.active {
-            display: block;
-            animation: slideDown 0.3s ease-out;
-        }
-        
+
+        nav.active { display: block; animation: slideDown 0.3s ease-out; }
+
         @keyframes slideDown {
             from { transform: translateY(-20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-        
-        nav ul {
-            flex-direction: column;
-            gap: 0;
-            list-style: none;
-        }
-        
-        nav ul li {
-            padding: 0.8rem 1.5rem;
-            border-bottom: 1px solid rgba(51,51,51,0.5);
-        }
-        
+
+        nav ul { flex-direction: column; gap: 0; list-style: none; }
+        nav ul li { padding: 0.8rem 1.5rem; border-bottom: 1px solid rgba(51,51,51,0.5); }
         nav ul li a {
             color: #e0e0e0;
             text-decoration: none;
@@ -136,37 +116,14 @@
             display: block;
             padding: 0.5rem 0;
         }
-        
+
         /* Main */
-        main {
-            margin-top: 70px;
-            padding: 1rem;
-        }
-        
-        section {
-            padding: 2.5rem 0;
-            border-bottom: 1px solid rgba(51,51,51,0.3);
-        }
-        
-        h1, h2, h3 {
-            color: #00c853;
-            margin-bottom: 1.5rem;
-            font-weight: 900;
-        }
-        
-        h1 {
-            font-size: 2rem;
-            text-align: center;
-            text-shadow: 0 0 20px rgba(0,200,83,0.3);
-        }
-        
-        h2 {
-            font-size: 1.6rem;
-            border-right: 5px solid #00c853;
-            padding-right: 1rem;
-            margin-bottom: 1.8rem;
-        }
-        
+        main { margin-top: 70px; padding: 1rem; }
+        section { padding: 2.5rem 0; border-bottom: 1px solid rgba(51,51,51,0.3); }
+        h1, h2, h3 { color: #00c853; margin-bottom: 1.5rem; font-weight: 900; }
+        h1 { font-size: 2rem; text-align: center; text-shadow: 0 0 20px rgba(0,200,83,0.3); }
+        h2 { font-size: 1.6rem; border-right: 5px solid #00c853; padding-right: 1rem; margin-bottom: 1.8rem; }
+
         /* Hero */
         .hero {
             height: auto;
@@ -182,24 +139,10 @@
             position: relative;
             overflow: hidden;
         }
-        
-        .hero h1 {
-            font-size: 2rem;
-            line-height: 1.3;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 900px;
-            margin-bottom: 2rem;
-            font-weight: 600;
-            line-height: 1.8;
-            position: relative;
-            z-index: 2;
-        }
-        
+
+        .hero h1 { font-size: 2rem; line-height: 1.3; position: relative; z-index: 2; }
+        .hero p { font-size: 1.1rem; max-width: 900px; margin-bottom: 2rem; font-weight: 600; line-height: 1.8; position: relative; z-index: 2; }
+
         .cta-button {
             display: inline-block;
             background: linear-gradient(135deg, #00c853 0%, #00ff5f 100%);
@@ -217,84 +160,37 @@
             position: relative;
             z-index: 2;
         }
-        
-        .cta-button:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(0,200,83,0.5);
-        }
-        
+
+        .cta-button:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 40px rgba(0,200,83,0.5); }
+
         .hero::after {
             content: '';
             position: absolute;
-            bottom: -50px;
-            left: 0;
-            width: 100%;
-            height: 50px;
+            bottom: -50px; left: 0;
+            width: 100%; height: 50px;
             background: linear-gradient(to top, #0a0a0a, transparent);
             z-index: 1;
         }
-        
-        .particles {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .particle {
-            position: absolute;
-            background: rgba(0,200,83,0.5);
-            border-radius: 50%;
-            animation: float linear infinite;
-        }
-        
+
+        .particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 1; }
+        .particle { position: absolute; background: rgba(0,200,83,0.5); border-radius: 50%; animation: float linear infinite; }
+
         @keyframes float {
             0% { transform: translateY(0) translateX(0); opacity: 1; }
             100% { transform: translateY(-1000px) translateX(200px); opacity: 0; }
         }
-        
+
         /* About */
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        
-        .about-text p {
-            margin-bottom: 1.2rem;
-            font-size: 1rem;
-            font-weight: 600;
-            line-height: 1.8;
-            color: #f0f0f0;
-        }
-        
-        .about-image {
-            margin-top: 1rem;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            transition: transform 0.5s ease;
-        }
-        
+        .about-content { display: flex; flex-direction: column; gap: 2rem; }
+        .about-text p { margin-bottom: 1.2rem; font-size: 1rem; font-weight: 600; line-height: 1.8; color: #f0f0f0; }
+        .about-image { margin-top: 1rem; border-radius: 15px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.4); transition: transform 0.5s ease; }
         .about-image:hover { transform: scale(1.02); }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-        
+        .about-image img { width: 100%; height: auto; display: block; transition: transform 0.5s ease; }
         .about-image:hover img { transform: scale(1.05); }
-        
+
         /* ===== TEAM - Compact Horizontal Cards ===== */
-        .team-members {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-        
+        .team-members { display: flex; flex-direction: column; gap: 0.8rem; }
+
         .member-card {
             background: linear-gradient(145deg, #1e1e1e 0%, #252525 100%);
             border-radius: 12px;
@@ -309,40 +205,39 @@
             padding: 0.7rem 1rem;
             gap: 1rem;
         }
-        
-        .member-card.visible {
-            opacity: 1;
-            transform: translateX(0);
+
+        /* Abdo Pakosh - red right border ONLY */
+        .member-card.abdo-card {
+            border-right-color: #ff0000;
         }
-        
+
+        .member-card.visible { opacity: 1; transform: translateX(0); }
+
         .member-card:hover {
             transform: translateX(-5px) !important;
             box-shadow: 0 8px 25px rgba(0,200,83,0.25) !important;
             border-right-color: #00ff5f;
             background: linear-gradient(145deg, #222 0%, #2a2a2a 100%);
         }
-        
+
+        /* Keep Abdo's border red on hover */
+        .member-card.abdo-card:hover {
+            box-shadow: 0 8px 25px rgba(255,0,0,0.2) !important;
+            border-right-color: #ff2222;
+        }
+
         .member-image {
-            width: 55px;
-            height: 55px;
+            width: 55px; height: 55px;
             border-radius: 50%;
             overflow: hidden;
             border: 2.5px solid #00c853;
             flex-shrink: 0;
             transition: all 0.3s ease;
         }
-        
-        .member-card:hover .member-image {
-            box-shadow: 0 0 15px rgba(0,200,83,0.5);
-            transform: scale(1.08);
-        }
-        
-        .member-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
+
+        .member-card:hover .member-image { box-shadow: 0 0 15px rgba(0,200,83,0.5); transform: scale(1.08); }
+        .member-image img { width: 100%; height: 100%; object-fit: cover; }
+
         .member-info {
             flex: 1;
             display: flex;
@@ -350,25 +245,12 @@
             justify-content: space-between;
             gap: 0.5rem;
         }
-        
-        .member-info h3 {
-            margin-bottom: 0;
-            font-size: 1rem;
-            color: #00c853;
-            font-weight: 700;
-        }
-        
-        .member-info p {
-            color: #888;
-            font-style: italic;
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-align: left;
-        }
+
+        .member-info h3 { margin-bottom: 0; font-size: 1rem; color: #00c853; font-weight: 700; }
+        .member-info p { color: #888; font-style: italic; font-weight: 600; font-size: 0.85rem; text-align: left; }
 
         .member-number {
-            width: 26px;
-            height: 26px;
+            width: 26px; height: 26px;
             border-radius: 50%;
             background: rgba(0,200,83,0.12);
             border: 1px solid rgba(0,200,83,0.3);
@@ -380,7 +262,7 @@
             color: #00c853;
             flex-shrink: 0;
         }
-        
+
         /* Animations */
         .fade-in { opacity: 0; transition: opacity 0.8s ease; }
         .fade-in.active { opacity: 1; }
@@ -388,16 +270,10 @@
         .slide-in-left.active { opacity: 1; transform: translateX(0); }
         .slide-in-right { opacity: 0; transform: translateX(50px); transition: all 0.8s ease; }
         .slide-in-right.active { opacity: 1; transform: translateX(0); }
-        
+
         /* Discord */
-        .discord-button-container {
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-        
+        .discord-button-container { margin-top: 1.5rem; margin-bottom: 1rem; text-align: center; position: relative; z-index: 2; }
+
         .discord-btn {
             display: inline-flex;
             align-items: center;
@@ -416,19 +292,14 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         .discord-btn i { font-size: 1.8rem; transition: transform 0.3s ease; }
         .discord-btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 40px rgba(88,101,242,0.6); background: #4752C4; border-color: #ffffff30; }
         .discord-btn:hover i { transform: rotate(10deg) scale(1.1); }
-        
+
         /* News */
-        .news-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
+        .news-container { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem; }
+
         .news-card {
             background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%);
             border-radius: 20px;
@@ -437,24 +308,12 @@
             border: 1px solid #333;
             transition: all 0.4s ease;
         }
-        
+
         .news-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,200,83,0.3); border-color: #00c853; }
-        
-        .news-video {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            background: #000;
-            overflow: hidden;
-        }
-        
-        .news-video iframe {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            border: none;
-        }
-        
+
+        .news-video { position: relative; width: 100%; padding-bottom: 56.25%; background: #000; overflow: hidden; }
+        .news-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
         .news-content { padding: 2rem; }
         .news-title { font-size: 1.5rem; color: #00c853; margin-bottom: 1rem; font-weight: 900; }
         .news-description { color: #e0e0e0; margin-bottom: 1.5rem; line-height: 1.8; font-weight: 600; }
@@ -476,10 +335,7 @@
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
 
         /* More News button */
-        .news-footer {
-            margin-top: 2rem;
-            text-align: center;
-        }
+        .news-footer { margin-top: 2rem; text-align: center; }
         .btn-more-news {
             display: inline-flex;
             align-items: center;
@@ -495,12 +351,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        .btn-more-news:hover {
-            background: #00c853;
-            color: #000;
-            box-shadow: 0 0 20px rgba(0,200,83,0.4);
-            transform: translateY(-3px);
-        }
+        .btn-more-news:hover { background: #00c853; color: #000; box-shadow: 0 0 20px rgba(0,200,83,0.4); transform: translateY(-3px); }
 
         /* All News Modal */
         .news-modal-overlay {
@@ -516,6 +367,7 @@
         }
         .news-modal-overlay.open { display: block; }
         @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
         .news-modal {
             background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
             max-width: 900px;
@@ -536,12 +388,7 @@
             background: #111;
             z-index: 10;
         }
-        .news-modal-header h2 {
-            border: none;
-            padding: 0;
-            margin: 0;
-            font-size: 1.4rem;
-        }
+        .news-modal-header h2 { border: none; padding: 0; margin: 0; font-size: 1.4rem; }
         .btn-close-modal {
             background: none;
             border: none;
@@ -552,15 +399,11 @@
             line-height: 1;
         }
         .btn-close-modal:hover { transform: rotate(90deg) scale(1.2); }
-        .news-modal-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            padding: 2rem;
-        }
-        @media (min-width: 600px) {
-            .news-modal-grid { grid-template-columns: repeat(2, 1fr); }
-        }
+
+        .news-modal-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem; }
+
+        @media (min-width: 600px) { .news-modal-grid { grid-template-columns: repeat(2, 1fr); } }
+
         .modal-video-card {
             background: linear-gradient(145deg, #1e1e1e 0%, #252525 100%);
             border-radius: 14px;
@@ -569,22 +412,12 @@
             transition: all 0.3s ease;
         }
         .modal-video-card:hover { border-color: #00c853; transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,200,83,0.2); }
-        .modal-video-thumb {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            background: #000;
-            overflow: hidden;
-        }
-        .modal-video-thumb iframe {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            border: none;
-        }
+        .modal-video-thumb { position: relative; width: 100%; padding-bottom: 56.25%; background: #000; overflow: hidden; }
+        .modal-video-thumb iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
         .modal-video-info { padding: 1rem 1.2rem; }
         .modal-video-title { color: #00c853; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; line-height: 1.4; }
         .modal-video-date { color: #888; font-size: 0.8rem; }
+
         .news-empty {
             text-align: center;
             padding: 4rem 2rem;
@@ -594,23 +427,9 @@
             border: 1px dashed #333;
             grid-column: 1 / -1;
         }
-        .news-empty i.icon-main {
-            font-size: 3rem;
-            color: #2a2a2a;
-            display: block;
-            margin-bottom: 1rem;
-        }
-        .news-empty h3 {
-            color: #555;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-        .news-empty p {
-            font-size: 0.9rem;
-            color: #444;
-            margin-bottom: 1.5rem;
-        }
+        .news-empty i.icon-main { font-size: 3rem; color: #2a2a2a; display: block; margin-bottom: 1rem; }
+        .news-empty h3 { color: #555; font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 700; }
+        .news-empty p { font-size: 0.9rem; color: #444; margin-bottom: 1.5rem; }
         .news-empty .btn-yt {
             display: inline-flex;
             align-items: center;
@@ -626,18 +445,11 @@
             font-weight: 700;
             transition: all 0.3s ease;
         }
-        .news-empty .btn-yt:hover {
-            background: rgba(255,0,0,0.2);
-            transform: translateY(-2px);
-        }
-        .news-error {
-            text-align: center;
-            padding: 3rem 1rem;
-            color: #888;
-            grid-column: 1 / -1;
-        }
+        .news-empty .btn-yt:hover { background: rgba(255,0,0,0.2); transform: translateY(-2px); }
+
+        .news-error { text-align: center; padding: 3rem 1rem; color: #888; grid-column: 1 / -1; }
         .news-error i { font-size: 2.5rem; color: #333; margin-bottom: 1rem; display: block; }
-        
+
         /* Footer */
         footer {
             background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
@@ -645,17 +457,9 @@
             text-align: center;
             border-top: 3px solid #00c853;
         }
-        
         .footer-content { max-width: 1200px; margin: 0 auto; }
-        
-        .footer-content .logo-container {
-            justify-content: center;
-            width: auto;
-            margin-bottom: 1.5rem;
-        }
-        
+        .footer-content .logo-container { justify-content: center; width: auto; margin-bottom: 1.5rem; }
         .social-links { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap; }
-        
         .social-links a {
             color: #e0e0e0;
             font-size: 1.5rem;
@@ -666,16 +470,15 @@
             background: rgba(0,200,83,0.1);
             text-decoration: none;
         }
-        
         .social-links a:hover { transform: translateY(-5px) scale(1.2); color: #00c853; background: rgba(0,200,83,0.2); box-shadow: 0 5px 15px rgba(0,200,83,0.3); }
         .copyright { color: #b0b0b0; font-size: 1rem; font-weight: 600; }
-        
+
         /* Loading */
         .loading { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0a0a0a; display: flex; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.5s ease; }
         .loading.hidden { opacity: 0; pointer-events: none; }
         .spinner { width: 50px; height: 50px; border: 3px solid rgba(0,200,83,0.3); border-top: 3px solid #00c853; border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        
+
         /* Desktop */
         @media (min-width: 769px) {
             header { padding: 1rem 2rem; flex-direction: row; }
@@ -696,27 +499,15 @@
             .hero p { font-size: clamp(1.1rem, 2.5vw, 1.4rem); }
             .discord-btn { font-size: 1.3rem; padding: 1.2rem 3rem; }
             .about-content { flex-direction: row; gap: 4rem; }
-
-            /* Team desktop: 2 columns grid of horizontal cards */
-            .team-members {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-
+            .team-members { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
             .member-image { width: 60px; height: 60px; }
             .member-info h3 { font-size: 1.05rem; }
-
             .news-container { grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); }
         }
-        
+
         /* Tablet */
         @media (min-width: 481px) and (max-width: 768px) {
-            .team-members {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.8rem;
-            }
+            .team-members { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
             .news-container { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
@@ -725,7 +516,7 @@
     <div class="loading" id="loading">
         <div class="spinner"></div>
     </div>
-    
+
     <header id="header">
         <div class="logo-container">
             <div class="logo">Nabtax Studio</div>
@@ -744,7 +535,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section id="home" class="hero">
             <div class="particles" id="particles"></div>
@@ -758,12 +549,12 @@
             </div>
             <a href="#team" class="cta-button fade-in">تعرف على فريقنا</a>
         </section>
-        
+
         <section id="about">
             <h2 class="slide-in-right">عن الاستديو</h2>
             <div class="about-content">
                 <div class="about-text slide-in-left">
-                    <p>Nabtax Studio هو استديو مستقل لتطوير الألعاب، تأسس بهدف تقديم تجارب لعب مميزة ومبتكرة. نؤمن بأن الألعاب هي فن تفاعلي قادر على سرد القصص وإثارة المشاعر.</p>
+                    <p>Nabtax Studio هو استوديو مستقل لتطوير الألعاب، تأسس بهدف تقديم تجارب لعب مميزة ومبتكرة. نؤمن بأن الألعاب هي فن تفاعلي قادر على سرد القصص وإثارة المشاعر.</p>
                     <p>نحن فريق من المطورين المتحمسين الذين يجمعون بين الخبرة التقنية والإبداع الفني لإنشاء ألعاب تترك أثراً لدى اللاعبين.</p>
                     <p>نركز على الجودة في كل تفصيل، بدءاً من الميكانيكا الأساسية للعبة وصولاً إلى التصميم الفني والصوتي.</p>
                 </div>
@@ -772,12 +563,13 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="team">
             <h2 class="slide-in-left">فريق العمل</h2>
             <div class="team-members">
 
-                <div class="member-card">
+                <!-- Abdo Pakosh: class="abdo-card" يجعل الإطار الجانبي أحمر فقط -->
+                <div class="member-card abdo-card">
                     <span class="member-number">1</span>
                     <div class="member-image">
                         <img src="https://i.postimg.cc/GmykF0SY/New-Project-059188A.png" alt="Abdo Pakosh" loading="lazy">
@@ -878,7 +670,7 @@
 
             </div>
         </section>
-        
+
         <section id="news">
             <h2 class="slide-in-right">الأخبار</h2>
             <div class="news-container" id="newsContainer">
@@ -911,13 +703,13 @@
                 <div class="news-modal-grid" id="newsModalGrid"></div>
             </div>
         </div>
-        
+
         <section id="projects">
             <h2 class="slide-in-left">الأعمال</h2>
             <!-- سيتم إضافة المحتوى لاحقًا -->
         </section>
     </main>
-    
+
     <footer class="fade-in">
         <div class="footer-content">
             <div class="logo-container">
@@ -936,252 +728,289 @@
             </div>
         </div>
     </footer>
-    
+
     <script>
-        // ====== YouTube RSS News Loader ======
-        (async function loadYouTubeNews() {
-            const CHANNEL_ID = 'UCPpJoF7L-rqfmmFnFcB6Etg';
-            const RSS_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
-            const PROXY = `https://api.allorigins.win/get?url=${encodeURIComponent(RSS_URL)}`;
+    // ====== YouTube RSS News Loader ======
+    (async function loadYouTubeNews() {
+        const CHANNEL_ID = 'UCPpJoF7L-rqfmmFnFcB6Etg';
+        const RSS_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
 
-            const newsContainer = document.getElementById('newsContainer');
-            const newsFooter = document.getElementById('newsFooter');
-            const btnMoreNews = document.getElementById('btnMoreNews');
-            const newsModalOverlay = document.getElementById('newsModalOverlay');
-            const newsModalGrid = document.getElementById('newsModalGrid');
-            const btnCloseModal = document.getElementById('btnCloseModal');
+        const PROXIES = [
+            `https://api.allorigins.win/raw?url=${encodeURIComponent(RSS_URL)}`,
+            `https://corsproxy.io/?${encodeURIComponent(RSS_URL)}`,
+            `https://api.allorigins.win/get?url=${encodeURIComponent(RSS_URL)}`
+        ];
 
-            function formatDate(dateStr) {
-                const d = new Date(dateStr);
-                return d.toLocaleDateString('ar-EG', { year:'numeric', month:'long', day:'numeric' });
-            }
+        const newsContainer    = document.getElementById('newsContainer');
+        const newsFooter       = document.getElementById('newsFooter');
+        const btnMoreNews      = document.getElementById('btnMoreNews');
+        const newsModalOverlay = document.getElementById('newsModalOverlay');
+        const newsModalGrid    = document.getElementById('newsModalGrid');
+        const btnCloseModal    = document.getElementById('btnCloseModal');
 
-            function isShort(entry) {
-                const title = (entry.querySelector('title')?.textContent || '').toLowerCase();
-                const link = entry.querySelector('link')?.getAttribute('href') || '';
-                return title.includes('#shorts') || title.includes('#short') || link.includes('/shorts/');
-            }
+        function formatDate(dateStr) {
+            const d = new Date(dateStr);
+            return d.toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
 
-            function extractVideoId(entry) {
-                const link = entry.querySelector('link')?.getAttribute('href') || '';
-                const m = link.match(/v=([a-zA-Z0-9_-]+)/);
-                return m ? m[1] : null;
-            }
+        function isShort(entry) {
+            const title = (entry.querySelector('title')?.textContent || '').toLowerCase();
+            const link  = entry.querySelector('link')?.getAttribute('href') || '';
+            return title.includes('#shorts') || title.includes('#short') || link.includes('/shorts/');
+        }
 
-            function buildNewsCard(entry) {
-                const title = entry.querySelector('title')?.textContent || 'فيديو جديد';
-                const published = entry.querySelector('published')?.textContent || '';
-                const videoId = extractVideoId(entry);
-                if (!videoId) return null;
-                const card = document.createElement('div');
-                card.className = 'news-card slide-in-left';
-                card.innerHTML = `
-                    <div class="news-video">
-                        <iframe src="https://www.youtube.com/embed/${videoId}" title="${title}"
-                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        function extractVideoId(entry) {
+            // 1) yt:videoId with namespace
+            const nsEls = entry.getElementsByTagNameNS('http://www.youtube.com/xml/schemas/2015', 'videoId');
+            if (nsEls.length > 0) return nsEls[0].textContent.trim();
+            // 2) without namespace
+            const plain = entry.querySelector('videoId');
+            if (plain?.textContent) return plain.textContent.trim();
+            // 3) from link href
+            const link = entry.querySelector('link')?.getAttribute('href') || '';
+            const m = link.match(/[?&]v=([a-zA-Z0-9_-]{11})/);
+            return m ? m[1] : null;
+        }
+
+        function buildNewsCard(entry) {
+            const title     = entry.querySelector('title')?.textContent || 'فيديو جديد';
+            const published = entry.querySelector('published')?.textContent || '';
+            const videoId   = extractVideoId(entry);
+            if (!videoId) return null;
+            const card = document.createElement('div');
+            card.className = 'news-card slide-in-left';
+            card.innerHTML = `
+                <div class="news-video">
+                    <iframe src="https://www.youtube.com/embed/${videoId}" title="${title}"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="news-content">
+                    <h3 class="news-title">${title}</h3>
+                    <p class="news-description">شاهد أحدث فيديو من Nabtax Studio على يوتيوب! لا تنسى الاشتراك في القناة لتصلك كل التحديثات أول بأول.</p>
+                    <div class="news-meta">
+                        <span><i class="far fa-calendar-alt"></i> ${formatDate(published)}</span>
+                        <span><i class="fab fa-youtube"></i> يوتيوب</span>
                     </div>
-                    <div class="news-content">
-                        <h3 class="news-title">${title}</h3>
-                        <p class="news-description">شاهد أحدث فيديو من Nabtax Studio على يوتيوب! لا تنسى الاشتراك في القناة لتصلك كل التحديثات أول بأول.</p>
-                        <div class="news-meta">
-                            <span><i class="far fa-calendar-alt"></i> ${formatDate(published)}</span>
-                            <span><i class="fab fa-youtube"></i> يوتيوب</span>
-                        </div>
-                    </div>`;
-                return card;
-            }
+                </div>`;
+            return card;
+        }
 
-            function buildModalCard(entry) {
-                const title = entry.querySelector('title')?.textContent || 'فيديو جديد';
-                const published = entry.querySelector('published')?.textContent || '';
-                const videoId = extractVideoId(entry);
-                if (!videoId) return null;
-                const card = document.createElement('div');
-                card.className = 'modal-video-card';
-                card.innerHTML = `
-                    <div class="modal-video-thumb">
-                        <iframe src="https://www.youtube.com/embed/${videoId}" title="${title}"
-                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen loading="lazy"></iframe>
-                    </div>
-                    <div class="modal-video-info">
-                        <div class="modal-video-title">${title}</div>
-                        <div class="modal-video-date"><i class="far fa-calendar-alt"></i> ${formatDate(published)}</div>
-                    </div>`;
-                return card;
-            }
+        function buildModalCard(entry) {
+            const title     = entry.querySelector('title')?.textContent || 'فيديو جديد';
+            const published = entry.querySelector('published')?.textContent || '';
+            const videoId   = extractVideoId(entry);
+            if (!videoId) return null;
+            const card = document.createElement('div');
+            card.className = 'modal-video-card';
+            card.innerHTML = `
+                <div class="modal-video-thumb">
+                    <iframe src="https://www.youtube.com/embed/${videoId}" title="${title}"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="modal-video-info">
+                    <div class="modal-video-title">${title}</div>
+                    <div class="modal-video-date"><i class="far fa-calendar-alt"></i> ${formatDate(published)}</div>
+                </div>`;
+            return card;
+        }
 
-            function closeModal() {
-                newsModalOverlay.classList.remove('open');
-                document.body.style.overflow = '';
-            }
+        function closeModal() {
+            newsModalOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
 
+        async function fetchXML() {
+            // 1) allorigins /raw
             try {
-                const res = await fetch(PROXY);
-                const data = await res.json();
-                const parser = new DOMParser();
-                const xml = parser.parseFromString(data.contents, 'text/xml');
-                const entries = Array.from(xml.querySelectorAll('entry'));
-                const longVideos = entries.filter(e => !isShort(e));
-
-                if (longVideos.length === 0) {
-                    newsContainer.innerHTML = `
-                        <div class="news-empty">
-                            <i class="fab fa-youtube icon-main"></i>
-                            <h3>لا توجد أخبار حالياً</h3>
-                            <p>لم يتم نشر أي فيديوهات جديدة بعد، تابعنا على يوتيوب لتكون أول من يعلم!</p>
-                            <a href="https://youtube.com/@nabtaxstudio" target="_blank" rel="noopener noreferrer" class="btn-yt">
-                                <i class="fab fa-youtube"></i> زيارة القناة
-                            </a>
-                        </div>`;
-                    return;
+                const res = await fetch(PROXIES[0]);
+                if (res.ok) {
+                    const text = await res.text();
+                    if (text.includes('<feed') || text.includes('<entry')) return text;
                 }
+            } catch (e) {}
 
-                newsContainer.innerHTML = '';
-                const preview = longVideos.slice(0, 2);
-                preview.forEach(entry => {
-                    const card = buildNewsCard(entry);
-                    if (card) newsContainer.appendChild(card);
-                });
-
-                setTimeout(() => {
-                    newsContainer.querySelectorAll('.slide-in-left').forEach(el => el.classList.add('active'));
-                }, 100);
-
-                if (longVideos.length > 2) {
-                    newsFooter.style.display = 'block';
-                    newsModalGrid.innerHTML = '';
-                    longVideos.forEach(entry => {
-                        const card = buildModalCard(entry);
-                        if (card) newsModalGrid.appendChild(card);
-                    });
+            // 2) corsproxy.io
+            try {
+                const res = await fetch(PROXIES[1]);
+                if (res.ok) {
+                    const text = await res.text();
+                    if (text.includes('<feed') || text.includes('<entry')) return text;
                 }
+            } catch (e) {}
 
-            } catch (err) {
-                newsContainer.innerHTML = `<div class="news-error"><i class="fab fa-youtube"></i><p>تعذّر تحميل الأخبار. تحقق من الاتصال وأعد تحميل الصفحة.</p></div>`;
+            // 3) allorigins /get (JSON wrapper)
+            try {
+                const res = await fetch(PROXIES[2]);
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.contents) return data.contents;
+                }
+            } catch (e) {}
+
+            throw new Error('All proxies failed');
+        }
+
+        try {
+            const xmlText    = await fetchXML();
+            const parser     = new DOMParser();
+            const xml        = parser.parseFromString(xmlText, 'text/xml');
+            const entries    = Array.from(xml.querySelectorAll('entry'));
+            const longVideos = entries.filter(e => !isShort(e));
+
+            if (longVideos.length === 0) {
+                newsContainer.innerHTML = `
+                    <div class="news-empty">
+                        <i class="fab fa-youtube icon-main"></i>
+                        <h3>لا توجد أخبار حالياً</h3>
+                        <p>لم يتم نشر أي فيديوهات جديدة بعد، تابعنا على يوتيوب لتكون أول من يعلم!</p>
+                        <a href="https://youtube.com/@nabtaxstudio" target="_blank" rel="noopener noreferrer" class="btn-yt">
+                            <i class="fab fa-youtube"></i> زيارة القناة
+                        </a>
+                    </div>`;
+                return;
             }
 
-            btnMoreNews && btnMoreNews.addEventListener('click', () => {
-                newsModalOverlay.classList.add('open');
-                document.body.style.overflow = 'hidden';
+            newsContainer.innerHTML = '';
+            longVideos.slice(0, 2).forEach(entry => {
+                const card = buildNewsCard(entry);
+                if (card) newsContainer.appendChild(card);
             });
-            btnCloseModal && btnCloseModal.addEventListener('click', closeModal);
-            newsModalOverlay && newsModalOverlay.addEventListener('click', (e) => {
-                if (e.target === newsModalOverlay) closeModal();
-            });
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') closeModal();
-            });
-        })();
-        // ====== End YouTube RSS News Loader ======
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const loading = document.getElementById('loading');
-            if (loading) {
-                setTimeout(() => { loading.classList.add('hidden'); }, 800);
-            }
-            
-            const header = document.getElementById('header');
-            if (header) {
-                window.addEventListener('scroll', function() {
-                    header.classList.toggle('scrolled', window.scrollY > 100);
+            setTimeout(() => {
+                newsContainer.querySelectorAll('.slide-in-left').forEach(el => el.classList.add('active'));
+            }, 100);
+
+            if (longVideos.length > 2) {
+                newsFooter.style.display = 'block';
+                newsModalGrid.innerHTML  = '';
+                longVideos.forEach(entry => {
+                    const card = buildModalCard(entry);
+                    if (card) newsModalGrid.appendChild(card);
                 });
             }
-            
-            const menuToggle = document.getElementById('menuToggle');
-            const mainNav = document.getElementById('mainNav');
-            
-            if (menuToggle && mainNav) {
-                menuToggle.addEventListener('click', function() {
-                    mainNav.classList.toggle('active');
-                    document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
-                    this.innerHTML = mainNav.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-                });
-                
-                document.addEventListener('click', function(e) {
-                    if (!mainNav.contains(e.target) && !menuToggle.contains(e.target) && mainNav.classList.contains('active')) {
+
+        } catch (err) {
+            newsContainer.innerHTML = `<div class="news-error"><i class="fab fa-youtube"></i><p>تعذّر تحميل الأخبار. تحقق من الاتصال وأعد تحميل الصفحة.</p></div>`;
+        }
+
+        btnMoreNews?.addEventListener('click', () => {
+            newsModalOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+        btnCloseModal?.addEventListener('click', closeModal);
+        newsModalOverlay?.addEventListener('click', (e) => { if (e.target === newsModalOverlay) closeModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    })();
+    // ====== End YouTube RSS News Loader ======
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const loading = document.getElementById('loading');
+        if (loading) { setTimeout(() => { loading.classList.add('hidden'); }, 800); }
+
+        const header = document.getElementById('header');
+        if (header) {
+            window.addEventListener('scroll', function () {
+                header.classList.toggle('scrolled', window.scrollY > 100);
+            });
+        }
+
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav    = document.getElementById('mainNav');
+
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', function () {
+                mainNav.classList.toggle('active');
+                document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+                this.innerHTML = mainNav.classList.contains('active')
+                    ? '<i class="fas fa-times"></i>'
+                    : '<i class="fas fa-bars"></i>';
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!mainNav.contains(e.target) && !menuToggle.contains(e.target) && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId      = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    window.scrollTo({ top: targetElement.offsetTop - headerHeight, behavior: 'smooth' });
+                    if (mainNav && mainNav.classList.contains('active')) {
                         mainNav.classList.remove('active');
-                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        document.getElementById('menuToggle').innerHTML = '<i class="fas fa-bars"></i>';
                         document.body.style.overflow = '';
                     }
-                });
-            }
-            
-            document.querySelectorAll('nav a').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        window.scrollTo({ top: targetElement.offsetTop - headerHeight, behavior: 'smooth' });
-                        if (mainNav && mainNav.classList.contains('active')) {
-                            mainNav.classList.remove('active');
-                            document.getElementById('menuToggle').innerHTML = '<i class="fas fa-bars"></i>';
-                            document.body.style.overflow = '';
-                        }
-                    }
-                });
+                }
             });
-            
-            const animateOnScroll = () => {
-                document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
-                    if (el.getBoundingClientRect().top < window.innerHeight / 1.2) {
-                        el.classList.add('active');
+        });
+
+        const animateOnScroll = () => {
+            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight / 1.2) {
+                    el.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+        animateOnScroll();
+
+        const teamSection = document.querySelector('#team');
+        if (teamSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelectorAll('.member-card').forEach((member, index) => {
+                            setTimeout(() => { member.classList.add('visible'); }, index * 80);
+                        });
                     }
                 });
-            };
-            
-            window.addEventListener('scroll', animateOnScroll);
-            window.addEventListener('load', animateOnScroll);
-            animateOnScroll();
-            
-            const teamSection = document.querySelector('#team');
-            if (teamSection) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.querySelectorAll('.member-card').forEach((member, index) => {
-                                setTimeout(() => { member.classList.add('visible'); }, index * 80);
-                            });
-                        }
-                    });
-                }, { threshold: 0.05 });
-                observer.observe(teamSection);
+            }, { threshold: 0.05 });
+            observer.observe(teamSection);
+        }
+
+        const typeWriter = () => {
+            const heroTitle = document.querySelector('.hero h1');
+            if (heroTitle) {
+                const text = heroTitle.textContent;
+                heroTitle.textContent = '';
+                let i = 0;
+                const typing = setInterval(() => {
+                    if (i < text.length) { heroTitle.textContent += text.charAt(i); i++; }
+                    else { clearInterval(typing); }
+                }, 100);
             }
-            
-            const typeWriter = () => {
-                const heroTitle = document.querySelector('.hero h1');
-                if (heroTitle) {
-                    const text = heroTitle.textContent;
-                    heroTitle.textContent = '';
-                    let i = 0;
-                    const typing = setInterval(() => {
-                        if (i < text.length) { heroTitle.textContent += text.charAt(i); i++; }
-                        else { clearInterval(typing); }
-                    }, 100);
-                }
-            };
-            
-            const createParticles = () => {
-                const heroSection = document.querySelector('.hero');
-                if (!heroSection) return;
-                const container = document.createElement('div');
-                container.className = 'particles';
-                heroSection.appendChild(container);
-                for (let i = 0; i < 30; i++) {
-                    const p = document.createElement('div');
-                    p.className = 'particle';
-                    const size = Math.random() * 5 + 2;
-                    p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;bottom:-10px;animation-duration:${Math.random()*15+10}s;animation-delay:${Math.random()*5}s`;
-                    container.appendChild(p);
-                }
-            };
-            
-            setTimeout(typeWriter, 1000);
-            createParticles();
-        });
+        };
+
+        const createParticles = () => {
+            const heroSection = document.querySelector('.hero');
+            if (!heroSection) return;
+            const container = document.createElement('div');
+            container.className = 'particles';
+            heroSection.appendChild(container);
+            for (let i = 0; i < 30; i++) {
+                const p    = document.createElement('div');
+                p.className = 'particle';
+                const size  = Math.random() * 5 + 2;
+                p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random() * 100}%;bottom:-10px;animation-duration:${Math.random() * 15 + 10}s;animation-delay:${Math.random() * 5}s`;
+                container.appendChild(p);
+            }
+        };
+
+        setTimeout(typeWriter, 1000);
+        createParticles();
+    });
     </script>
 </body>
 </html>
