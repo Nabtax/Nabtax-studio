@@ -7,8 +7,8 @@
     <title>Nabtax Studio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <meta name="description" content="Nabtax Studio هو استوديو مستقل لتطوير ألعاب الفيديو يقدم أفكار مبتكرة وتجارب ترفيهية ممتعة ل[...]
-    <meta name="keywords" content="Nabtax Studio, تطوير ألعاب, استوديو ألعاب, ألعاب فيديو, جيمز, Indie Games, Game Development, Nabtax, مطور ألعاب, ص[...]
+    <meta name="description" content="Nabtax Studio هو استوديو مستقل لتطوير ألعاب الفيديو يقدم أفكار مبتكرة وتجارب ترفيهية ممتعة للاعبين.">
+    <meta name="keywords" content="Nabtax Studio, تطوير ألعاب, استوديو ألعاب, ألعاب فيديو, جيمز, Indie Games, Game Development, Nabtax, مطور ألعاب, صناعة الألعاب, استوديو تطوير الألعاب">
     <meta name="author" content="Nabtax Studio">
     <meta property="og:title" content="Nabtax Studio">
     <meta property="og:description" content="Nabtax Studio هو استوديو مستقل لتطوير ألعاب الفيديو بأفكار مبتكرة وتجارب جديدة.">
@@ -176,7 +176,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
             padding: 3rem 1rem;
             margin-bottom: 2rem;
             position: relative;
@@ -678,7 +678,7 @@
         .copyright { color: #b0b0b0; font-size: 1rem; font-weight: 600; }
 
         /* Loading */
-        .loading { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0a0a0a; display: flex; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.3s ease; }
+        .loading { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0a0a0a; display: flex; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.5s ease; }
         .loading.hidden { opacity: 0; pointer-events: none; }
         .spinner { width: 50px; height: 50px; border: 3px solid rgba(0,200,83,0.3); border-top: 3px solid #00c853; border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
@@ -756,13 +756,14 @@
         <section id="home" class="hero">
             <div class="particles" id="particles"></div>
             <h1 class="fade-in">مرحباً بكم في Nabtax Studio</h1>
-            <p class="fade-in">استديو متخصص في تطوير الألعاب الإبداعية التي تقدم تجارب فريدة للاعبين حول العالم. نبتكر، نطور، ننشر تجارب لعب لا تُنسى.</p>
+            <p class="fade-in">استديو متخصص في تطوير الألعاب الإبداعية التي تقدم تجارب فريدة للاعبين حول العالم. نبتكر، نطور، ونلهم.</p>
             <div class="discord-button-container fade-in">
                 <a href="https://discord.gg/ZfpJCPSvS5" target="_blank" rel="noopener noreferrer" class="discord-btn">
                     <i class="fab fa-discord"></i>
                     انضم إلى سيرفر الديسكورد
                 </a>
             </div>
+            <!-- FIX: الزر بقى <a> عادي بـ href="#team" والـ JS هيشيله تلقائي -->
             <a href="#team" class="cta-button fade-in">تعرف على فريقنا</a>
         </section>
 
@@ -770,9 +771,9 @@
             <h2 class="slide-in-right">عن الاستديو</h2>
             <div class="about-content">
                 <div class="about-text slide-in-left">
-                    <p>Nabtax Studio هو استوديو مستقل لتطوير الألعاب، تأسس بهدف تقديم تجارب لعب مميزة ومبتكرة. نؤمن بأن الألعاب الجيدة تجمع بين الفن والتكنولوجيا.</p>
-                    <p>نحن فريق من المطورين المتحمسين الذين يجمعون بين الخبرة التقنية والإبداع الفني لإنشاء ألعاب تترك انطباعاً دائماً لدى اللاعبين.</p>
-                    <p>نركز على الجودة في كل تفصيل، بدءاً من الميكانيكا الأساسية للعبة وصولاً إلى التصميم الفني والصوت والقصة.</p>
+                    <p>Nabtax Studio هو استوديو مستقل لتطوير الألعاب، تأسس بهدف تقديم تجارب لعب مميزة ومبتكرة. نؤمن بأن الألعاب هي فن تفاعلي قادر على سرد القصص وإثارة المشاعر.</p>
+                    <p>نحن فريق من المطورين المتحمسين الذين يجمعون بين الخبرة التقنية والإبداع الفني لإنشاء ألعاب تترك أثراً لدى اللاعبين.</p>
+                    <p>نركز على الجودة في كل تفصيل، بدءاً من الميكانيكا الأساسية للعبة وصولاً إلى التصميم الفني والصوتي.</p>
                 </div>
                 <div class="about-image slide-in-right">
                     <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Game Development" loading="lazy">
@@ -829,6 +830,28 @@
                 </div>
 
                 <div class="member-card">
+                    <span class="member-number">5</span>
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/jq6NKHFL/20260209-223753.png" alt="KREASTALE" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>KREASTALE</h3>
+                        <p>3D designer</p>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <span class="member-number">6</span>
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/BbGkJ36q/Untitled472-20260307130802.png" alt="Mehdi Meri" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Mehdi Meri</h3>
+                        <p>Artist</p>
+                    </div>
+                </div>
+
+                <div class="member-card">
                     <span class="member-number">7</span>
                     <div class="member-image">
                         <img src="https://i.postimg.cc/C5p9hVKv/IMG-20251221-WA0007-1.jpg" alt="Mazen" loading="lazy">
@@ -839,7 +862,17 @@
                     </div>
                 </div>
 
-                
+                <div class="member-card">
+                    <span class="member-number">8</span>
+                    <div class="member-image">
+                        <img src="https://i.postimg.cc/T1j75w9B/2313a2b521665640c2de32a9529fba79.jpg" alt="Montazer Mahdy" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Montazer Mahdy</h3>
+                        <p>3D designer</p>
+                    </div>
+                </div>
+
                 <div class="member-card">
                     <span class="member-number">9</span>
                     <div class="member-image">
@@ -850,18 +883,7 @@
                         <p>Artist</p>
                     </div>
                 </div>
-                
-                <div class="member-card">
-                    <span class="member-number">9</span>
-                    <div class="member-image">
-                        <img src="https://i.postimg.cc/3xx5Jt9h/de3465490119b3fd.png" alt="Hass3en" loading="lazy">
-                    </div>
-                    <div class="member-info">
-                        <h3>SamKud</h3>
-                        <p>Dev</p>
-                    </div>
-                </div>
-                
+
             </div>
         </section>
 
@@ -969,7 +991,7 @@
                     </div>
                     <div class="news-content">
                         <h3 class="news-title">${title}</h3>
-                        <p class="news-description">شاهد أحدث فيديو من Nabtax Studio على يوتيوب! لا تنسى الاشتراك في القناة لتصلك كل التحديثات.</p>
+                        <p class="news-description">شاهد أحدث فيديو من Nabtax Studio على يوتيوب! لا تنسى الاشتراك في القناة لتصلك كل التحديثات أول بأول.</p>
                         <div class="news-meta">
                             <span><i class="far fa-calendar-alt"></i> ${formatDate(published)}</span>
                             <span><i class="fab fa-youtube"></i> يوتيوب</span>
@@ -998,143 +1020,177 @@
                 return card;
             }
 
+            function closeModal() {
+                newsModalOverlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
             try {
-                const response = await fetch(PROXY);
-                const data = await response.json();
-                const xmlText = data.contents;
+                const res = await fetch(PROXY);
+                const data = await res.json();
                 const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                const xml = parser.parseFromString(data.contents, 'text/xml');
+                const entries = Array.from(xml.querySelectorAll('entry'));
+                const longVideos = entries.filter(e => !isShort(e));
 
-                if (xmlDoc.getElementsByTagName('parsererror').length > 0) {
-                    throw new Error('XML parsing error');
-                }
-
-                const entries = Array.from(xmlDoc.getElementsByTagName('entry'));
-                const mainEntries = entries.filter(e => !isShort(e)).slice(0, 2);
-                const allEntries = entries.filter(e => !isShort(e));
-
-                // Load main videos
-                newsContainer.innerHTML = '';
-                if (mainEntries.length === 0) {
+                if (longVideos.length === 0) {
                     newsContainer.innerHTML = `
                         <div class="news-empty">
-                            <i class="fas fa-video icon-main"></i>
+                            <i class="fab fa-youtube icon-main"></i>
                             <h3>لا توجد أخبار حالياً</h3>
-                            <p>تابع قناتنا على YouTube لتصلك أحدث التحديثات</p>
-                            <a href="https://youtube.com/@nabtaxstudio?si=HRHgCrlf_1gzgQAu" target="_blank" rel="noopener noreferrer" class="btn-yt">
-                                <i class="fab fa-youtube"></i> اشترك بالقناة
+                            <p>لم يتم نشر أي فيديوهات جديدة بعد، تابعنا على يوتيوب لتكون أول من يعلم!</p>
+                            <a href="https://youtube.com/@nabtaxstudio" target="_blank" rel="noopener noreferrer" class="btn-yt">
+                                <i class="fab fa-youtube"></i> زيارة القناة
                             </a>
                         </div>`;
-                } else {
-                    mainEntries.forEach(entry => {
-                        const card = buildNewsCard(entry);
-                        if (card) newsContainer.appendChild(card);
-                    });
+                    return;
                 }
 
-                // Show button if more videos exist
-                if (allEntries.length > 2) {
-                    newsFooter.style.display = 'block';
-                    btnMoreNews.addEventListener('click', () => {
-                        newsModalOverlay.classList.add('open');
-                        newsModalGrid.innerHTML = '';
-                        allEntries.forEach(entry => {
-                            const card = buildModalCard(entry);
-                            if (card) newsModalGrid.appendChild(card);
-                        });
-                    });
-                }
-
-                // Close modal
-                btnCloseModal.addEventListener('click', () => newsModalOverlay.classList.remove('open'));
-                newsModalOverlay.addEventListener('click', (e) => {
-                    if (e.target === newsModalOverlay) newsModalOverlay.classList.remove('open');
+                newsContainer.innerHTML = '';
+                const preview = longVideos.slice(0, 2);
+                preview.forEach(entry => {
+                    const card = buildNewsCard(entry);
+                    if (card) newsContainer.appendChild(card);
                 });
 
-                // Loading animation
                 setTimeout(() => {
-                    document.getElementById('loading').classList.add('hidden');
-                    document.querySelectorAll('.fade-in').forEach(el => el.classList.add('active'));
-                }, 300);
+                    newsContainer.querySelectorAll('.slide-in-left').forEach(el => el.classList.add('active'));
+                }, 100);
 
-            } catch (error) {
-                console.error('Error loading news:', error);
-                newsContainer.innerHTML = `
-                    <div class="news-error">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <p>عذراً، حدث خطأ في تحميل الأخبار</p>
-                    </div>`;
-                document.getElementById('loading').classList.add('hidden');
-            }
-        })();
-
-        // ====== Scroll Animations ======
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (entry.target.classList.contains('slide-in-left')) {
-                        entry.target.classList.add('active');
-                    } else if (entry.target.classList.contains('slide-in-right')) {
-                        entry.target.classList.add('active');
-                    } else if (entry.target.classList.contains('member-card')) {
-                        setTimeout(() => entry.target.classList.add('visible'), 50);
-                    }
+                if (longVideos.length > 2) {
+                    newsFooter.style.display = 'block';
+                    newsModalGrid.innerHTML = '';
+                    longVideos.forEach(entry => {
+                        const card = buildModalCard(entry);
+                        if (card) newsModalGrid.appendChild(card);
+                    });
                 }
+
+            } catch (err) {
+                newsContainer.innerHTML = `<div class="news-error"><i class="fab fa-youtube"></i><p>تعذّر تحميل الأخبار. تحقق من الاتصال وأعد تحميل الصفحة.</p></div>`;
+            }
+
+            btnMoreNews && btnMoreNews.addEventListener('click', () => {
+                newsModalOverlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.slide-in-left, .slide-in-right, .member-card').forEach(el => {
-            observer.observe(el);
-        });
-
-        // ====== Menu Toggle ======
-        const menuToggle = document.getElementById('menuToggle');
-        const mainNav = document.getElementById('mainNav');
-
-        menuToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-        });
-
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mainNav.classList.remove('active');
+            btnCloseModal && btnCloseModal.addEventListener('click', closeModal);
+            newsModalOverlay && newsModalOverlay.addEventListener('click', (e) => {
+                if (e.target === newsModalOverlay) closeModal();
             });
-        });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+        })();
+        // ====== End YouTube RSS News Loader ======
 
-        // ====== Header Scroll Effect ======
-        window.addEventListener('scroll', () => {
+        document.addEventListener('DOMContentLoaded', function() {
+            const loading = document.getElementById('loading');
+            if (loading) {
+                setTimeout(() => { loading.classList.add('hidden'); }, 800);
+            }
+
             const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+            if (header) {
+                window.addEventListener('scroll', function() {
+                    header.classList.toggle('scrolled', window.scrollY > 100);
+                });
             }
+
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+                    this.innerHTML = mainNav.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!mainNav.contains(e.target) && !menuToggle.contains(e.target) && mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+
+            // FIX: بقى بيشيل كل الروابط اللي بتبدأ بـ # مش بس روابط الـ nav
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        window.scrollTo({ top: targetElement.offsetTop - headerHeight, behavior: 'smooth' });
+                        if (mainNav && mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            document.getElementById('menuToggle').innerHTML = '<i class="fas fa-bars"></i>';
+                            document.body.style.overflow = '';
+                        }
+                    }
+                });
+            });
+
+            const animateOnScroll = () => {
+                document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                    if (el.getBoundingClientRect().top < window.innerHeight / 1.2) {
+                        el.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', animateOnScroll);
+            window.addEventListener('load', animateOnScroll);
+            animateOnScroll();
+
+            const teamSection = document.querySelector('#team');
+            if (teamSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.querySelectorAll('.member-card').forEach((member, index) => {
+                                setTimeout(() => { member.classList.add('visible'); }, index * 80);
+                            });
+                        }
+                    });
+                }, { threshold: 0.05 });
+                observer.observe(teamSection);
+            }
+
+            const typeWriter = () => {
+                const heroTitle = document.querySelector('.hero h1');
+                if (heroTitle) {
+                    const text = heroTitle.textContent;
+                    heroTitle.textContent = '';
+                    let i = 0;
+                    const typing = setInterval(() => {
+                        if (i < text.length) { heroTitle.textContent += text.charAt(i); i++; }
+                        else { clearInterval(typing); }
+                    }, 100);
+                }
+            };
+
+            const createParticles = () => {
+                const heroSection = document.querySelector('.hero');
+                if (!heroSection) return;
+                const container = document.createElement('div');
+                container.className = 'particles';
+                heroSection.appendChild(container);
+                for (let i = 0; i < 30; i++) {
+                    const p = document.createElement('div');
+                    p.className = 'particle';
+                    const size = Math.random() * 5 + 2;
+                    p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;bottom:-10px;animation-duration:${Math.random()*15+10}s;animation-delay:${Math.random()*5}s`;
+                    container.appendChild(p);
+                }
+            };
+
+            setTimeout(typeWriter, 1000);
+            createParticles();
         });
-
-        // ====== Particle Animation ======
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            if (!particlesContainer) return;
-
-            for (let i = 0; i < 30; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.width = Math.random() * 4 + 'px';
-                particle.style.height = particle.style.width;
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
-                particle.style.animationDelay = Math.random() * 2 + 's';
-                particlesContainer.appendChild(particle);
-            }
-        }
-
-        createParticles();
     </script>
 </body>
 </html>
